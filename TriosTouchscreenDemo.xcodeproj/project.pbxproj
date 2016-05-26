@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */; };
+		01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */; };
+		01A0EF831CF5B54C00FB3D2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */; };
+		01A0EF851CF5BBD600FB3D2E /* IMercuryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF841CF5BBD600FB3D2E /* IMercuryPage.swift */; };
 		849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A12461CF4B70600E30B19 /* AppDelegate.swift */; };
-		849A12491CF4B70600E30B19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A12481CF4B70600E30B19 /* ViewController.swift */; };
 		849A124C1CF4B70600E30B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124A1CF4B70600E30B19 /* Main.storyboard */; };
 		849A124E1CF4B70600E30B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849A124D1CF4B70600E30B19 /* Assets.xcassets */; };
 		849A12511CF4B70600E30B19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124F1CF4B70600E30B19 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerPage.swift; sourceTree = "<group>"; };
+		01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		01A0EF841CF5BBD600FB3D2E /* IMercuryPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMercuryPage.swift; sourceTree = "<group>"; };
 		849A12431CF4B70600E30B19 /* TriosTouchscreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A12461CF4B70600E30B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		849A12481CF4B70600E30B19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		849A124B1CF4B70600E30B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849A124D1CF4B70600E30B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849A12501CF4B70600E30B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,9 +41,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A0EF7D1CF52C0700FB3D2E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */,
+				01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */,
+				01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */,
+				01A0EF841CF5BBD600FB3D2E /* IMercuryPage.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		849A123A1CF4B70600E30B19 = {
 			isa = PBXGroup;
 			children = (
+				01A0EF7D1CF52C0700FB3D2E /* Controllers */,
 				849A12451CF4B70600E30B19 /* TriosTouchscreenDemo */,
 				849A12441CF4B70600E30B19 /* Products */,
 			);
@@ -55,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				849A12461CF4B70600E30B19 /* AppDelegate.swift */,
-				849A12481CF4B70600E30B19 /* ViewController.swift */,
 				849A124A1CF4B70600E30B19 /* Main.storyboard */,
 				849A124D1CF4B70600E30B19 /* Assets.xcassets */,
 				849A124F1CF4B70600E30B19 /* LaunchScreen.storyboard */,
@@ -96,6 +113,7 @@
 				TargetAttributes = {
 					849A12421CF4B70600E30B19 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7YU2DLX693;
 					};
 				};
 			};
@@ -135,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849A12491CF4B70600E30B19 /* ViewController.swift in Sources */,
 				849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */,
+				01A0EF851CF5BBD600FB3D2E /* IMercuryPage.swift in Sources */,
+				01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */,
+				01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */,
+				01A0EF831CF5B54C00FB3D2E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TriosTouchscreenDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tainstruments.triostouchscreen.TriosTouchscreenDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TriosTouchscreenDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tainstruments.triostouchscreen.TriosTouchscreenDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -288,6 +315,7 @@
 				849A12571CF4B70600E30B19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
