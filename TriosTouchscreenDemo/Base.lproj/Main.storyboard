@@ -370,6 +370,9 @@
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="389" y="37" width="220" height="217"/>
                                 </variation>
+                                <connections>
+                                    <action selector="signalsButtonClicked:" destination="Gz1-KM-un5" eventType="touchUpInside" id="oXr-8V-Hv6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VC-4p-6Zx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -586,7 +589,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJm-ue-jLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="706.875"/>
+            <point key="canvasLocation" x="1458" y="855.5"/>
+        </scene>
+        <!--Signals Tabbed Page-->
+        <scene sceneID="XfA-7r-pf1">
+            <objects>
+                <viewController storyboardIdentifier="SignalsTabbedPage" id="qnf-UC-B78" customClass="SignalsTabbedPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WEu-EV-jaf"/>
+                        <viewControllerLayoutGuide type="bottom" id="uJu-1A-p0F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cRY-nt-Hi9">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xkl-vH-B7N">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Signals"/>
+                                    <segment title="Chart"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="440" y="0.0" width="121" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0U-Jc-Imb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="28" width="1000" height="511"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="GXp-eu-Foy" kind="embed" id="01u-Bh-ozv"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xkl-vH-B7N" firstAttribute="centerX" secondItem="cRY-nt-Hi9" secondAttribute="centerX" id="WwA-gL-dj8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Xkl-vH-B7N"/>
+                                <exclude reference="K0U-Jc-Imb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WwA-gL-dj8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Xkl-vH-B7N"/>
+                                <include reference="K0U-Jc-Imb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WwA-gL-dj8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="539"/>
+                    <connections>
+                        <outlet property="_segmentedControl" destination="Xkl-vH-B7N" id="CR1-vS-zoy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7h0-42-IsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="1493.5"/>
+        </scene>
+        <!--Signals Page-->
+        <scene sceneID="CeQ-rD-S4Q">
+            <objects>
+                <tableViewController id="GXp-eu-Foy" customClass="SignalsPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iG1-TX-eH1">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nY1-2H-EBM">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nY1-2H-EBM" id="gTM-fm-jL5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GXp-eu-Foy" id="Isi-By-Wxq"/>
+                            <outlet property="delegate" destination="GXp-eu-Foy" id="gLv-D7-482"/>
+                        </connections>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="511"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ei5-Ag-c9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2273.25" y="1498.875"/>
         </scene>
     </scenes>
     <resources>
