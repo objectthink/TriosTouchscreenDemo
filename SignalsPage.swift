@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignalsPage: UITableViewController, IMercuryPage
+class SignalsPage: UITableViewController, IMercuryPage, MercuryInstrumentDelegate
 {
    var _app:IMercuryApp!
    var app:IMercuryApp
@@ -60,6 +60,47 @@ class SignalsPage: UITableViewController, IMercuryPage
       // Dispose of any resources that can be recreated.
    }
    
+   func stat(message: NSData!, withSubcommand subcommand: uint)
+   {
+      if(subcommand == RealTimeSignalStatus.rawValue)
+      {
+         //print("REALTIMESIGNALS !!!!!!")
+         
+         let _signalsResponse = MercuryRealTimeSignalsStatusResponse(message: message)
+         
+         dispatch_async(dispatch_get_main_queue(),
+         { () -> Void in
+                          
+            //let f:Float = self._signalsResponse.signals![Int(76)].floatValue
+                           
+            //self._temperatureLabel.text = String.init(format: "%.2f℃", f)
+         })
+      }
+   }
+   
+   func connected()
+   {
+   }
+   
+   func accept(access: MercuryAccess)
+   {
+   }
+   
+   func response(
+      message: NSData!,
+      withSequenceNumber sequenceNumber: uint,
+                         subcommand: uint,
+                         status: uint)
+   {
+   }
+   
+   func ackWithSequenceNumber(sequencenumber: uint)
+   {
+   }
+   
+   func nakWithSequenceNumber(sequencenumber: uint, andError errorcode: uint)
+   {
+   }
    
    /*
     // MARK: - Navigation

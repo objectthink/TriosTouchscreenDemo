@@ -508,7 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXF-Ul-Qzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="243.375"/>
+            <point key="canvasLocation" x="1221" y="12.375"/>
         </scene>
         <!--Autosampler Page-->
         <scene sceneID="m0y-IZ-Ihp">
@@ -594,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJm-ue-jLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="694.125"/>
+            <point key="canvasLocation" x="1266" y="466.125"/>
         </scene>
         <!--Signals Tabbed Page-->
         <scene sceneID="XfA-7r-pf1">
@@ -611,7 +611,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0U-Jc-Imb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <connections>
-                                    <segue destination="GXp-eu-Foy" kind="embed" id="01u-Bh-ozv"/>
+                                    <segue destination="GXp-eu-Foy" kind="embed" identifier="EmbedSegue" id="01u-Bh-ozv"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xkl-vH-B7N">
@@ -636,6 +636,9 @@
                                         <include reference="5op-He-foU"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="_segmentedControlValueChanged:" destination="qnf-UC-B78" eventType="valueChanged" id="7dr-sx-3LT"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -684,12 +687,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7h0-42-IsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="1012.125"/>
+            <point key="canvasLocation" x="1260" y="937.125"/>
+        </scene>
+        <!--Chart Page-->
+        <scene sceneID="unn-jh-Pv1">
+            <objects>
+                <viewController storyboardIdentifier="ChartPage" id="vAi-vD-mBD" customClass="ChartPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GKF-Q6-re7"/>
+                        <viewControllerLayoutGuide type="bottom" id="uJc-z0-lpP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8FQ-XX-Agx">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chart goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-Ba-bJw">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="375" y="259" width="265" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sp8-Ba-bJw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="sp8-Ba-bJw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="539"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrg-cy-ppZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="1378.125"/>
         </scene>
         <!--Signals Page-->
         <scene sceneID="CeQ-rD-S4Q">
             <objects>
-                <tableViewController id="GXp-eu-Foy" customClass="SignalsPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SignalsPage" id="GXp-eu-Foy" customClass="SignalsPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iG1-TX-eH1">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="511"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -831,7 +874,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei5-Ag-c9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822.5" y="1186.125"/>
+            <point key="canvasLocation" x="2157.75" y="926.625"/>
         </scene>
     </scenes>
     <resources>

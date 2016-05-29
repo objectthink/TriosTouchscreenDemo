@@ -22,6 +22,7 @@
 		01B4ADB21CFA1E6E00A111EB /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA61CFA1E6E00A111EB /* GCDAsyncUdpSocket.m */; };
 		01B4ADB31CFA1E6E00A111EB /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA91CFA1E6E00A111EB /* GCDAsyncSocket.m */; };
 		01B4ADB51CFA2EA700A111EB /* SignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB41CFA2EA700A111EB /* SignalCell.swift */; };
+		01B4ADB71CFB17AF00A111EB /* ChartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB61CFB17AF00A111EB /* ChartPage.swift */; };
 		849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A12461CF4B70600E30B19 /* AppDelegate.swift */; };
 		849A124C1CF4B70600E30B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124A1CF4B70600E30B19 /* Main.storyboard */; };
 		849A124E1CF4B70600E30B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849A124D1CF4B70600E30B19 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		01B4ADAB1CFA1E6E00A111EB /* MercuryBroadcastManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MercuryBroadcastManager.h; sourceTree = "<group>"; };
 		01B4ADAC1CFA1E6E00A111EB /* MercuryFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MercuryFile.h; sourceTree = "<group>"; };
 		01B4ADB41CFA2EA700A111EB /* SignalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalCell.swift; sourceTree = "<group>"; };
+		01B4ADB61CFB17AF00A111EB /* ChartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPage.swift; sourceTree = "<group>"; };
 		849A12431CF4B70600E30B19 /* TriosTouchscreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A12461CF4B70600E30B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849A124B1CF4B70600E30B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				01A0EF881CF8EF4500FB3D2E /* SignalsTabbedPage.swift */,
 				01A0EF8A1CF8EFD800FB3D2E /* SignalsPage.swift */,
 				01B4ADB41CFA2EA700A111EB /* SignalCell.swift */,
+				01B4ADB61CFB17AF00A111EB /* ChartPage.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */,
 				01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */,
 				01B4ADB01CFA1E6E00A111EB /* MercuryFile.m in Sources */,
+				01B4ADB71CFB17AF00A111EB /* ChartPage.swift in Sources */,
 				01B4ADAD1CFA1E6E00A111EB /* MercuryInstrument.m in Sources */,
 				01B4ADB11CFA1E6E00A111EB /* MercuryBroadcastManager.m in Sources */,
 				01A0EF831CF5B54C00FB3D2E /* MainViewController.swift in Sources */,

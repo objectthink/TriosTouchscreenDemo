@@ -46,16 +46,18 @@ class MainPage: UIViewController, IMercuryPage
    
    @IBAction func signalsButtonClicked(sender: AnyObject)
    {
-      let page = self.storyboard?.instantiateViewControllerWithIdentifier("SignalsTabbedPage")
+      let controller = self.storyboard?.instantiateViewControllerWithIdentifier("SignalsTabbedPage")
+      var page = controller as! IMercuryPage
       
-      _app.next(page as! IMercuryPage)
+      _app.next(&page)// as! IMercuryPage)
    }
    
    @IBAction func autosamplerButtonClicked(sender: AnyObject)
    {
-      let page = self.storyboard?.instantiateViewControllerWithIdentifier("AutosamplerPage")
+      let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AutosamplerPage")
+      var page = controller as! IMercuryPage
       
-      _app.next(page as! IMercuryPage)
+      _app.next(&page)// as! IMercuryPage)
    }
    
    override func didReceiveMemoryWarning()

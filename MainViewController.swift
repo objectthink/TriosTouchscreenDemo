@@ -19,7 +19,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    @IBOutlet var _temperatureLabel: UILabel!
    
    var _currentPage:IMercuryPage!
-   var _previousPage:IMercuryPage!
+   var _previousPage:IMercuryPage = MainPage()
    var _instrument:MercuryInstrument!
    
    var _signalsResponse: MercuryRealTimeSignalsStatusResponse! = nil
@@ -75,7 +75,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          access: 1000)      
    }
    
-   func next(page:IMercuryPage)
+   func next(inout page:IMercuryPage)
    {
       let nextPage = (page as! UIViewController)
       let currentPage = childViewControllers.last! as UIViewController
@@ -83,7 +83,13 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       _previousPage = (currentPage as! IMercuryPage)
       
       currentPage.willMoveToParentViewController(nil)
+      
+      //set before we add the sybview as prepareforsegue will be
+      //triggered for pages with a container view
+      page.app = self
+
       addChildViewController(nextPage)
+      
       nextPage.view.frame = currentPage.view.frame
       
       transitionFromViewController(
@@ -109,10 +115,12 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    
    func back()
    {
-      if _previousPage != nil
-      {
-         next(_previousPage)
-      }
+      next(&_previousPage)
+      
+      //if _previousPage != nil
+      //{
+      //   next(&_previousPage)
+      //}
    }
    
    override func didReceiveMemoryWarning()

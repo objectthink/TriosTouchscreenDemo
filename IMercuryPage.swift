@@ -13,7 +13,7 @@ protocol IMercuryApp
 {
    var instrument:MercuryInstrument {get set}
    
-   func next(page:IMercuryPage)
+   func next(inout page:IMercuryPage)
    func back()
 }
 
