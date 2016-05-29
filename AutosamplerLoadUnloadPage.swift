@@ -1,21 +1,18 @@
 //
-//  AutosamplerPage.swift
+//  AutosamplerLoadUnloadPage.swift
 //  TriosTouchscreenDemo
 //
-//  Created by stephen eshelman on 5/25/16.
+//  Created by stephen eshelman on 5/29/16.
 //  Copyright © 2016 tainstruments.com. All rights reserved.
 //
 
 import UIKit
 
-class AutosamplerPage: UIViewController, IMercuryPage
+class AutosamplerLoadUnloadPage: UIViewController, IMercuryPage
 {
-   @IBOutlet weak var _calibrationButton: UIButton!
-   @IBOutlet weak var _loadunloadButton: UIButton!
-   
    var _app:IMercuryApp!
    var app:IMercuryApp
-      {
+   {
       get
       {
          return _app;
@@ -31,16 +28,6 @@ class AutosamplerPage: UIViewController, IMercuryPage
       super.viewDidLoad()
       
       // Do any additional setup after loading the view.
-      _calibrationButton.setImage(UIImage.init(named:"autosamp_pressed"), forState: .Highlighted)
-      _loadunloadButton.setImage(UIImage.init(named:"loadunload_pressed"), forState: .Highlighted)
-   }
-   
-   @IBAction func loadunloadButtonClicked(sender: AnyObject)
-   {
-      let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AutosamplerLoadUnloadPage")
-      var page = controller as! IMercuryPage
-      
-      _app.next(&page)// as! IMercuryPage)
    }
    
    override func didReceiveMemoryWarning()

@@ -531,6 +531,9 @@
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="535" y="176" width="220" height="217"/>
                                 </variation>
+                                <connections>
+                                    <action selector="loadunloadButtonClicked:" destination="SVx-Zx-70r" eventType="touchUpInside" id="eBJ-Jp-FXb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUs-pi-zdN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -594,7 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJm-ue-jLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="466.125"/>
+            <point key="canvasLocation" x="1221" y="463.875"/>
         </scene>
         <!--Signals Tabbed Page-->
         <scene sceneID="XfA-7r-pf1">
@@ -687,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7h0-42-IsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="937.125"/>
+            <point key="canvasLocation" x="1221" y="926.625"/>
         </scene>
         <!--Chart Page-->
         <scene sceneID="unn-jh-Pv1">
@@ -727,7 +730,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrg-cy-ppZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="1378.125"/>
+            <point key="canvasLocation" x="1221" y="1375.875"/>
+        </scene>
+        <!--Autosampler Load Unload Page-->
+        <scene sceneID="Fas-Uh-g35">
+            <objects>
+                <viewController storyboardIdentifier="AutosamplerLoadUnloadPage" id="y2W-Ax-X9q" customClass="AutosamplerLoadUnloadPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YpM-NY-VNU"/>
+                        <viewControllerLayoutGuide type="bottom" id="GPa-Nx-lQV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="InA-8v-Ex9">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="539"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veA-Zc-0gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982.25" y="463.875"/>
         </scene>
         <!--Signals Page-->
         <scene sceneID="CeQ-rD-S4Q">

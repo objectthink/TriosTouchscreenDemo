@@ -19,10 +19,11 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    @IBOutlet var _temperatureLabel: UILabel!
    
    var _currentPage:IMercuryPage!
-   var _previousPage:IMercuryPage = MainPage()
    var _instrument:MercuryInstrument!
    
    var _signalsResponse: MercuryRealTimeSignalsStatusResponse! = nil
+   
+   var _pages:Stack<IMercuryPage>
    
    var instrument:MercuryInstrument
    {
@@ -37,7 +38,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    }
    
    var _supportedSignals:[uint] =
-      [
+   [
          IdDeltaT0C.rawValue,
          IdDeltaT0CFilt.rawValue,
          IdDeltaT0CUnc.rawValue,
@@ -49,6 +50,13 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          IdT0UncorrectedC.rawValue,
          IdCommonTime.rawValue
    ]
+   
+   required init?(coder aDecoder: NSCoder)
+   {
+      _pages = Stack<IMercuryPage>()
+
+      super.init(coder: aDecoder)
+   }
    
    override func viewDidLoad()
    {
@@ -77,35 +85,19 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    
    func next(inout page:IMercuryPage)
    {
-      let nextPage = (page as! UIViewController)
-      let currentPage = childViewControllers.last! as UIViewController
+      //let nextPage = (page as! UIViewController)
+      //let currentPageController = childViewControllers.last! as UIViewController
       
-      _previousPage = (currentPage as! IMercuryPage)
-      
-      currentPage.willMoveToParentViewController(nil)
+      //peek and call canClose
+      //then push page and call aboutToOpen, aboutToShow, postShow
       
       //set before we add the sybview as prepareforsegue will be
       //triggered for pages with a container view
       page.app = self
+      
+      transitionFromPage(_pages.peek(), to: page)
 
-      addChildViewController(nextPage)
-      
-      nextPage.view.frame = currentPage.view.frame
-      
-      transitionFromViewController(
-         currentPage,
-         toViewController: nextPage,
-         duration: 0.25,
-         options: .TransitionCrossDissolve,
-         animations:
-         { () -> Void in
-            // nothing needed here
-         },
-         completion:
-         { (finished) -> Void in
-            currentPage.removeFromParentViewController()
-            nextPage.didMoveToParentViewController(self)
-      })
+      _pages.push(page)
    }
    
    @IBAction func backButtonClicked(sender: AnyObject)
@@ -115,12 +107,46 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    
    func back()
    {
-      next(&_previousPage)
+      //peek and call aboutToClose, canClose
+      //pop and call aboutToRemove
+      //peek again and call aboutToShow, postShow
       
-      //if _previousPage != nil
-      //{
-      //   next(&_previousPage)
-      //}
+      if _pages.peek() is MainPage
+      {
+         return
+      }
+      
+      transitionFromPage(_pages.pop(), to: _pages.peek())
+   }
+   
+   func transitionFromPage(
+      from:IMercuryPage,
+      to:IMercuryPage
+   )
+   {
+      let fromController:UIViewController = from as! UIViewController
+      let toController:UIViewController = to as! UIViewController
+      
+      fromController.willMoveToParentViewController(nil)
+      
+      addChildViewController(toController)
+      
+      toController.view.frame = fromController.view.frame
+      
+      transitionFromViewController(
+         fromController,
+         toViewController: toController,
+         duration: 0.25,
+         options: .TransitionCrossDissolve,
+         animations:
+         { () -> Void in
+            // nothing needed here
+         },
+         completion:
+         { (finished) -> Void in
+            fromController.removeFromParentViewController()
+            toController.didMoveToParentViewController(self)
+      })
    }
    
    override func didReceiveMemoryWarning()
@@ -137,7 +163,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          
          page.app = self
          
-         _currentPage = page
+         _pages.push(page)
       }
    }
    
@@ -195,4 +221,24 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
     }
     */
    
+}
+
+struct Stack<Element>
+{
+   var items = [Element]()
+   
+   mutating func push(item: Element)
+   {
+      items.append(item)
+   }
+   
+   mutating func pop() -> Element
+   {
+      return items.removeLast()
+   }
+   
+   func peek() -> Element
+   {
+      return items.last!
+   }
 }
