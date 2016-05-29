@@ -11,8 +11,10 @@ import UIKit
 
 protocol IMercuryApp
 {
-    func next(page:IMercuryPage)
-    func back()
+   var instrument:MercuryInstrument {get set}
+   
+   func next(page:IMercuryPage)
+   func back()
 }
 
 protocol IMercuryPage

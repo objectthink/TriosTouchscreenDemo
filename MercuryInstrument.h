@@ -1,0 +1,135 @@
+//
+//  MercuryInstrument.h
+//  TRIOS-MOBILE
+//
+//  Created by stephen eshelman on 6/4/14.
+//  Copyright (c) 2014 objectthink.com. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "GCDAsyncSocket.h"
+
+typedef enum MercuryAccessType
+{
+   Viewer = 1,
+   Master = 2,
+   Engineering = 1000
+} MercuryAccess;
+
+typedef enum
+{
+   MercuryReadFileCommandId = 0x00000007,
+   MercuryStartProcedureCommandId = 0x00010006,
+   MercurySetProcedureCommandId = 0x01010000,
+   MercuryGetProcedureStatusCommandId = 0x00000009,
+   MercuryGetDataFileStatusCommandId = 0x00000006,
+   MercuryGetProcedureCommandId = 0x01000000
+}MercuryCommandId;
+
+@interface MercuryInstrumentItem : NSObject <NSCopying>
+{
+}
+
+@property (strong, nonatomic) NSMutableData* bytes;
+
+-(float)floatAtOffset:(NSUInteger)offset inData:(NSData*)data;
+-(uint)uintAtOffset:(NSUInteger)offset inData:(NSData*)data;
+
+-(id)initWithMessage:(NSData*)message;
+@end
+
+@interface MercuryCommand : MercuryInstrumentItem
+{
+}
+
+@property uint subCommandId;
+
+-(id)init;
+-(NSMutableData*)getBytes;
+@end
+
+@interface MercuryStatus : MercuryInstrumentItem
+{
+}
+
+@property uint subCommandId;
+
+@end
+
+@interface MercuryAction : MercuryCommand
+@end
+
+@interface MercuryGet : MercuryCommand
+@end
+
+@interface MercuryResponse : MercuryInstrumentItem
+@end
+
+@interface MercuryStartProcedureCommand : MercuryAction
+-(id)init;
+@end
+
+@interface MercuryGetProcedureStatusCommand : MercuryGet
+-(id)init;
+@end
+
+@interface MercuryGetDataFileStatusCommand : MercuryGet
+-(id)init;
+@end
+
+@interface MercurySetRealTimeSignalsCommand : MercuryAction
+-(id)init;
+-(void)addSignal:(int)signal;
+@end
+
+@interface MercuryGetRealTimeSignalsCommand : MercuryGet
+-(id)init;
+@end
+
+@protocol MercuryInstrumentDelegate <NSObject>
+-(void)connected;
+-(void)accept:(MercuryAccess)access;
+-(void)stat:(NSData*)message withSubcommand:(uint)subcommand;
+-(void)response:(NSData*)message withSequenceNumber:(uint)sequenceNumber subcommand:(uint)subcommand status:(uint)status;
+-(void)ackWithSequenceNumber:(uint)sequencenumber;
+-(void)nakWithSequenceNumber:(uint)sequencenumber andError:(uint)errorcode;
+
+@optional
+-(void)error:(NSError*)error;
+@end
+
+@interface MercuryInstrument : NSObject <GCDAsyncSocketDelegate>
+{
+   
+}
+
+@property (nonatomic) MercuryAccess access;
+@property (strong, nonatomic)NSString* host;
+@property (strong, nonatomic)GCDAsyncSocket* socket;
+@property NSDictionary<NSNumber*, NSString*>* _signalToString;
+@property BOOL isTrios;
+
+-(instancetype)init;
+
+-(BOOL)connectToHost:(NSString*)host andPort:(uint16_t)port;
+-(void)disconnect;
+
+-(int)sendCommand:(MercuryCommand*)command;
+-(MercuryResponse*)sendCommandNew:(MercuryCommand*)sendCommand;
+
+-(void)sendCommand:(MercuryCommand*)command onCompletion:(void (^)(MercuryResponse*))completionBlock;
+
+-(BOOL)
+   loginWithUsername:(NSString*)username
+   machineName:(NSString*)machineName
+   ipAddress:(NSString*)ipAddress
+   access:(uint)access;
+
+-(float)floatAtOffset:(NSUInteger)offset inData:(NSData*)data;
+-(uint)uintAtOffset:(NSUInteger)offset inData:(NSData*)data;
+-(void)addDelegate:(id<MercuryInstrumentDelegate>) delegate;
+-(void)removeDelegate:(id<MercuryInstrumentDelegate>) delegate;
+-(NSArray*)knownSignalNames;
+-(NSArray*)knownSignalKeys;
+-(NSString*)signalToString:(uint)index;
+@end
