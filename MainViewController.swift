@@ -183,11 +183,11 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
             
             if f == -Float.infinity
             {
-               self._temperatureLabel.text = "---"
+               self._temperatureLabel.text = "--- ℃"
             }
             else
             {
-               self._temperatureLabel.text = String.init(format: "%.2f℃", f)
+               self._temperatureLabel.text = String.init(format: "%.2f ℃", f)
             }
          })
       }
@@ -205,13 +205,13 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
             switch(runStatus)
             {
                case  0:
-                  self._statusLabel.text = "Status: Idle"
+                  self._statusLabel.text = "Idle"
                case 1:
-                  self._statusLabel.text = "Status: PreTest"
+                  self._statusLabel.text = "PreTest"
                case 2:
-                  self._statusLabel.text = "Status: Test"
+                  self._statusLabel.text = "Test"
                case 3:
-                  self._statusLabel.text = "Status: PostTest"
+                  self._statusLabel.text = "PostTest"
                default:
                   self._statusLabel.text = ""
             }

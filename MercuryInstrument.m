@@ -686,7 +686,7 @@
    uint datalength = [self uintAtOffset:4 inData:data];
 
    //////////////////////////////
-   NSData* message = [NSData dataWithBytes:[data bytes]+12 length:[self uintAtOffset:4 inData:data]];
+   NSData* message = [NSData dataWithBytes:[data bytes]+12 length:datalength]; //[self uintAtOffset:4 inData:data]];
    if([delegates count] > 0)
    {
       if ([typeAsString isEqualToString:@"ACPT"])
@@ -703,10 +703,12 @@
       {
          uint subcommand = [self uintAtOffset:12 inData:data];
          
-         //FIXUP MESSAGE SO THAT WE CAN USE ENUM TO INDEX INTO
-         //SIGNALS RETURNED IN STATUS
-         message = [NSData dataWithBytes:[data bytes]+8 length:[self uintAtOffset:4 inData:data]];
-
+         if(subcommand == 0x00020002)
+         {
+            //FIXUP MESSAGE SO THAT WE CAN USE ENUM TO INDEX INTO
+            //SIGNALS RETURNED IN STATUS
+            message = [NSData dataWithBytes:[data bytes]+8 length:[self uintAtOffset:4 inData:data]];
+         }
          
          id delegatesCopy = delegates.copy;
          for (id<MercuryInstrumentDelegate> d in delegatesCopy)
