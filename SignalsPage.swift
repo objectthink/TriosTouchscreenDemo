@@ -10,9 +10,32 @@ import UIKit
 
 class SignalsPage: UITableViewController, IMercuryPage, MercuryInstrumentDelegate
 {
+   var _signalsResponse: MercuryRealTimeSignalsStatusResponse! = nil
+
+   var _supportedSignals:[uint] =
+   [
+      IdSetPointTemperature.rawValue,
+      IdTemperature.rawValue,
+      IdFlangeC.rawValue,
+      IdRefJunctionC.rawValue,
+      IdHeaterC.rawValue,
+      IdBasePurgeFlowRate.rawValue
+      
+      //IdDeltaT0C.rawValue,
+      //IdDeltaT0CFilt.rawValue,
+      //IdDeltaT0CUnc.rawValue,
+      //IdDeltaTC.rawValue,
+      //IdFlangeC.rawValue,
+      //IdHeatFlow.rawValue,
+      //IdT0UncorrectedMV.rawValue,
+      //IdT0C.rawValue,
+      //IdT0UncorrectedC.rawValue,
+      //IdCommonTime.rawValue
+   ]
+   
    var _app:IMercuryApp!
    var app:IMercuryApp
-      {
+   {
       get
       {
          return _app;
@@ -29,11 +52,28 @@ class SignalsPage: UITableViewController, IMercuryPage, MercuryInstrumentDelegat
       
       // Do any additional setup after loading the view.
    }
+
+   override func viewDidDisappear(animated: Bool)
+   {
+      app.instrument.removeDelegate(self)
+   }
+   
+   override func viewDidAppear(animated: Bool)
+   {
+      app.instrument.addDelegate(self)
+   }
    
    override
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
    {
-      return 7
+      if _signalsResponse != nil
+      {
+         return 6
+      }
+      else
+      {
+         return 0
+      }
    }
    
    override
@@ -41,8 +81,18 @@ class SignalsPage: UITableViewController, IMercuryPage, MercuryInstrumentDelegat
    {
       let cell = tableView.dequeueReusableCellWithIdentifier("SignalCell") as! SignalCell
 
-      cell._nameLabel.text  = "Set Point Temperature"
-      cell._valueLabel.text = "39.99"
+      let f:Float = self._signalsResponse.signals![Int(_supportedSignals[indexPath.row])].floatValue
+      
+      if f == -Float.infinity
+      {
+         cell._valueLabel.text = "---"
+      }
+      else
+      {
+         cell._valueLabel.text = String.init(format: "%.2f", f)
+      }
+      
+      cell._nameLabel.text  = app.instrument.signalToString(_supportedSignals[indexPath.row])
       cell._unitsLabel.text = "℃"
       
       return cell
@@ -64,16 +114,11 @@ class SignalsPage: UITableViewController, IMercuryPage, MercuryInstrumentDelegat
    {
       if(subcommand == RealTimeSignalStatus.rawValue)
       {
-         //print("REALTIMESIGNALS !!!!!!")
-         
-         let _signalsResponse = MercuryRealTimeSignalsStatusResponse(message: message)
+         _signalsResponse = MercuryRealTimeSignalsStatusResponse(message: message)
          
          dispatch_async(dispatch_get_main_queue(),
          { () -> Void in
-                          
-            //let f:Float = self._signalsResponse.signals![Int(76)].floatValue
-                           
-            //self._temperatureLabel.text = String.init(format: "%.2f℃", f)
+            self.tableView.reloadData()
          })
       }
    }

@@ -279,10 +279,10 @@
       @{
         [NSNumber numberWithInt:IdHeaterADC] : @"IdHeaterADC",
         [NSNumber numberWithInt:IdHeaterMV] : @"IdHeaterMV",
-        [NSNumber numberWithInt:IdHeaterC] : @"IdHeaterC",
+        [NSNumber numberWithInt:IdHeaterC] : @"Heater Temperature",
         [NSNumber numberWithInt:IdFlangeADC] : @"IdFlangeADC",
         [NSNumber numberWithInt:IdFlangeMV] : @"IdFlangeMV",
-        [NSNumber numberWithInt:IdFlangeC] : @"IdFlangeC",
+        //[NSNumber numberWithInt:IdFlangeC] : @"IdFlangeC",
         [NSNumber numberWithInt:IdT0UncorrectedADC] : @"IdT0UncorrectedADC",
         [NSNumber numberWithInt:IdT0UncorrectedMV] : @"IdT0UncorrectedMV",
         [NSNumber numberWithInt:IdT0C] : @"IdT0C",
@@ -292,7 +292,7 @@
         [NSNumber numberWithInt:IdDeltaT0MV] : @"IdDeltaT0MV",
         [NSNumber numberWithInt:IdDeltaT0UVUnc] : @"IdDeltaT0UVUnc",
         [NSNumber numberWithInt:IdRefJunctionMV] : @"IdRefJunctionMV",
-        [NSNumber numberWithInt:IdRefJunctionC] : @"IdRefJunctionC",
+        [NSNumber numberWithInt:IdRefJunctionC] : @"Reference Junction Temperature",
         [NSNumber numberWithInt:IdDeltaLidADC] : @"IdDeltaLidADC",
         [NSNumber numberWithInt:IdDeltaLidMV] : @"IdDeltaLidMV",
         [NSNumber numberWithInt:IdDeltaLidUV] : @"IdDeltaLidUV",
@@ -304,7 +304,12 @@
         [NSNumber numberWithInt:IdSampleTC] : @"IdSampleTC",
         
         [NSNumber numberWithInt:IdCommonTime] : @"IdCommonTime",
-        [NSNumber numberWithInt:IdHeatFlow]:@"IdHeatFlow"
+        [NSNumber numberWithInt:IdHeatFlow]:@"IdHeatFlow",
+        
+        [NSNumber numberWithInt:IdSetPointTemperature]:@"Set Point Temperature",
+        [NSNumber numberWithInt:IdTemperature]:@"Temperature",
+        [NSNumber numberWithInt:IdFlangeC]:@"Flange Temperature",
+        [NSNumber numberWithInt:IdBasePurgeFlowRate]:@"Base Purge"
         };
       
       delegates = [[NSMutableArray alloc]init];

@@ -71,17 +71,29 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-VP-lEK">
                                                 <rect key="frame" x="0.0" y="0.0" width="72" height="77"/>
                                                 <state key="normal" image="red-!"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="77"/>
+                                                </variation>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="temp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="uxV-rr-yai">
                                                 <rect key="frame" x="72" y="0.0" width="37" height="77"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="72" y="0.0" width="37" height="77"/>
+                                                </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="37.99℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-NX-wsL">
                                                 <rect key="frame" x="109" y="0.0" width="107" height="77"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="109" y="0.0" width="107" height="77"/>
+                                                </variation>
                                             </label>
                                         </subviews>
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="568" y="0.0" width="216" height="77"/>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -321,6 +333,7 @@
                         <outlet property="_homeButton" destination="lEZ-i8-1NY" id="bKh-L8-9vb"/>
                         <outlet property="_resetButton" destination="GQs-dN-gNK" id="Bbw-rP-YOR"/>
                         <outlet property="_startButton" destination="Az6-Kk-i2v" id="yYB-fi-Rdv"/>
+                        <outlet property="_statusLabel" destination="ojE-4Q-kJy" id="c3n-tB-2yG"/>
                         <outlet property="_stopButton" destination="pZz-OO-gbl" id="2qs-uW-3yP"/>
                         <outlet property="_temperatureLabel" destination="hIk-NX-wsL" id="OfA-6o-8bu"/>
                         <outlet property="_togglelidButton" destination="MoN-xb-Lgs" id="MIQ-uE-Aob"/>
@@ -767,25 +780,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1000" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Point Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-9H-Mk2">
-                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="495" id="JFg-l9-t19"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="JFg-l9-t19"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=regular">
-                                                <mask key="constraints">
-                                                    <include reference="JFg-l9-t19"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zr-NH-2Xj">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <constraints>
@@ -826,14 +820,37 @@
                                                 </mask>
                                             </variation>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Point Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-9H-Mk2">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="495" id="JFg-l9-t19">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="577"/>
+                                                </constraint>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="JFg-l9-t19"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <mask key="constraints">
+                                                    <include reference="JFg-l9-t19"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="5Oy-9H-Mk2" firstAttribute="firstBaseline" secondItem="5zr-NH-2Xj" secondAttribute="firstBaseline" id="B4E-4P-XHv"/>
                                         <constraint firstItem="5Oy-9H-Mk2" firstAttribute="leading" secondItem="gTM-fm-jL5" secondAttribute="leadingMargin" constant="94" id="DkS-cZ-LW6">
-                                            <variation key="heightClass=regular-widthClass=regular" constant="161"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="97"/>
                                         </constraint>
                                         <constraint firstItem="5zr-NH-2Xj" firstAttribute="firstBaseline" secondItem="66g-MN-fan" secondAttribute="firstBaseline" id="LtM-lF-UGH"/>
-                                        <constraint firstItem="5zr-NH-2Xj" firstAttribute="leading" secondItem="5Oy-9H-Mk2" secondAttribute="trailing" constant="8" symbolic="YES" id="ReP-gp-kPw"/>
+                                        <constraint firstItem="5zr-NH-2Xj" firstAttribute="leading" secondItem="5Oy-9H-Mk2" secondAttribute="trailing" constant="8" symbolic="YES" id="ReP-gp-kPw">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="2"/>
+                                        </constraint>
                                         <constraint firstItem="5Oy-9H-Mk2" firstAttribute="baseline" secondItem="5zr-NH-2Xj" secondAttribute="baseline" id="a7s-40-10j"/>
                                         <constraint firstAttribute="bottom" secondItem="5Oy-9H-Mk2" secondAttribute="bottom" id="cgL-I6-Oea">
                                             <variation key="heightClass=regular-widthClass=regular" constant="-25"/>
@@ -844,9 +861,9 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="subviews">
-                                            <exclude reference="5Oy-9H-Mk2"/>
                                             <exclude reference="5zr-NH-2Xj"/>
                                             <exclude reference="66g-MN-fan"/>
+                                            <exclude reference="5Oy-9H-Mk2"/>
                                         </mask>
                                         <mask key="constraints">
                                             <exclude reference="B4E-4P-XHv"/>
@@ -862,9 +879,9 @@
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=regular">
                                         <mask key="subviews">
-                                            <include reference="5Oy-9H-Mk2"/>
                                             <include reference="5zr-NH-2Xj"/>
                                             <include reference="66g-MN-fan"/>
+                                            <include reference="5Oy-9H-Mk2"/>
                                         </mask>
                                         <mask key="constraints">
                                             <include reference="B4E-4P-XHv"/>

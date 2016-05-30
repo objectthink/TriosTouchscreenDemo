@@ -17,6 +17,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    @IBOutlet weak var _backButton: UIButton!
    @IBOutlet weak var _homeButton: UIButton!
    @IBOutlet var _temperatureLabel: UILabel!
+   @IBOutlet var _statusLabel: UILabel!
    
    var _currentPage:IMercuryPage!
    var _instrument:MercuryInstrument!
@@ -74,7 +75,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       
       _instrument.addDelegate(self)
       
-      _instrument.connectToHost("10.52.52.117", andPort: 8080)
+      _instrument.connectToHost("10.52.58.81", andPort: 8080)
       
       _instrument.loginWithUsername(
          "MERCURY_TOUCHSCREEN_IPAD",
@@ -180,15 +181,73 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
             
             let f:Float = self._signalsResponse.signals![Int(76)].floatValue
             
-            self._temperatureLabel.text = String.init(format: "%.2f℃", f)
-            
-            //String(format: "%f",self._signalsResponse.signals[9] )//"\(self._signalsResponse.signals[9])"
+            if f == -Float.infinity
+            {
+               self._temperatureLabel.text = "---"
+            }
+            else
+            {
+               self._temperatureLabel.text = String.init(format: "%.2f℃", f)
+            }
+         })
+      }
+      
+      if subcommand == ProcedureStatus.rawValue
+      {
+         let response = MercuryProcedureStatus(message: message)
+         print(response.endStatus)
+         print(response.runStatus)
+         print(response.currentSegmentId)
+         
+         let runStatus = response.runStatus.rawValue
+         dispatch_async(dispatch_get_main_queue(),
+         { () -> Void in
+            switch(runStatus)
+            {
+               case  0:
+                  self._statusLabel.text = "Status: Idle"
+               case 1:
+                  self._statusLabel.text = "Status: PreTest"
+               case 2:
+                  self._statusLabel.text = "Status: Test"
+               case 3:
+                  self._statusLabel.text = "Status: PostTest"
+               default:
+                  self._statusLabel.text = ""
+            }
+                           
          })
       }
    }
    
    func connected()
    {
+      _instrument.sendCommand(MercuryGetProcedureStatusCommand())
+      { (r) -> Void in
+         
+         self._statusLabel.text = "Some status"
+         
+         let response = MercuryProcedureStatusResponse(message: NSData(data: r.bytes))
+         
+         let runStatus = response.runStatus.rawValue
+         dispatch_async(dispatch_get_main_queue(),
+         { () -> Void in
+            switch(runStatus)
+            {
+               case  0:
+                  self._statusLabel.text = "Idle"
+               case 1:
+                  self._statusLabel.text = "PreTest"
+               case 2:
+                  self._statusLabel.text = "Test"
+               case 3:
+                  self._statusLabel.text = "PostTest"
+               default:
+                  self._statusLabel.text = "Unknown"
+            }
+                           
+         })
+      }
    }
    
    func accept(access: MercuryAccess)
