@@ -75,7 +75,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       
       _instrument.addDelegate(self)
       
-      _instrument.connectToHost("10.52.58.81", andPort: 8080)
+      _instrument.connectToHost("10.52.52.117", andPort: 8080)
       
       _instrument.loginWithUsername(
          "MERCURY_TOUCHSCREEN_IPAD",

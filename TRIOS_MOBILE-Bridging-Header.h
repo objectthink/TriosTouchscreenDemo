@@ -9,3 +9,4 @@
 #import "MercuryStatus.h"
 #import "MercuryBroadcastManager.h"
 #import "MercuryFile.h"
+#import "BEMSimpleLineGraphView.h"

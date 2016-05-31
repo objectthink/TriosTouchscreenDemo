@@ -705,7 +705,7 @@
             </objects>
             <point key="canvasLocation" x="1221" y="926.625"/>
         </scene>
-        <!--Chart Page-->
+        <!--Data Source-->
         <scene sceneID="unn-jh-Pv1">
             <objects>
                 <viewController storyboardIdentifier="ChartPage" id="vAi-vD-mBD" customClass="ChartPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -716,34 +716,132 @@
                     <view key="view" contentMode="scaleToFill" id="8FQ-XX-Agx">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chart goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-Ba-bJw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyA-wF-k1t" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorLine">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorPoint">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorXaxisLabel">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorYaxisLabel">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vAi-vD-mBD" id="xHN-r2-ixH"/>
+                                    <outlet property="delegate" destination="vAi-vD-mBD" id="3Ny-OM-OuA"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-Df-gCZ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="hqD-if-nWm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="375" y="259" width="265" height="21"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hqD-if-nWm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="hqD-if-nWm"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G63-AS-301">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="YpW-uY-Cgl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YpW-uY-Cgl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="YpW-uY-Cgl"/>
+                                    </mask>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zyA-wF-k1t" firstAttribute="top" secondItem="GKF-Q6-re7" secondAttribute="bottom" id="IEr-p5-E4j">
+                                <variation key="heightClass=regular-widthClass=regular" constant="39"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="zyA-wF-k1t" secondAttribute="bottom" constant="20" symbolic="YES" id="LTH-xG-VsT">
+                                <variation key="heightClass=regular-widthClass=regular" constant="49"/>
+                            </constraint>
+                            <constraint firstItem="Gy1-Df-gCZ" firstAttribute="centerX" secondItem="zyA-wF-k1t" secondAttribute="centerX" id="Q0w-iV-fT0"/>
+                            <constraint firstItem="Gy1-Df-gCZ" firstAttribute="top" secondItem="GKF-Q6-re7" secondAttribute="bottom" id="RLC-oo-OoU"/>
+                            <constraint firstItem="G63-AS-301" firstAttribute="top" secondItem="zyA-wF-k1t" secondAttribute="bottom" constant="8" symbolic="YES" id="klO-bh-2Sc"/>
+                            <constraint firstItem="zyA-wF-k1t" firstAttribute="trailing" secondItem="8FQ-XX-Agx" secondAttribute="trailingMargin" id="t8v-3i-7JG"/>
+                            <constraint firstItem="zyA-wF-k1t" firstAttribute="leading" secondItem="8FQ-XX-Agx" secondAttribute="leadingMargin" id="tqn-AE-nrC"/>
+                            <constraint firstItem="G63-AS-301" firstAttribute="centerX" secondItem="zyA-wF-k1t" secondAttribute="centerX" id="xMb-HZ-li0"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="sp8-Ba-bJw"/>
+                                <exclude reference="zyA-wF-k1t"/>
+                                <exclude reference="Gy1-Df-gCZ"/>
+                                <exclude reference="G63-AS-301"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="IEr-p5-E4j"/>
+                                <exclude reference="LTH-xG-VsT"/>
+                                <exclude reference="t8v-3i-7JG"/>
+                                <exclude reference="tqn-AE-nrC"/>
+                                <exclude reference="Q0w-iV-fT0"/>
+                                <exclude reference="RLC-oo-OoU"/>
+                                <exclude reference="klO-bh-2Sc"/>
+                                <exclude reference="xMb-HZ-li0"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="sp8-Ba-bJw"/>
+                                <include reference="zyA-wF-k1t"/>
+                                <include reference="Gy1-Df-gCZ"/>
+                                <include reference="G63-AS-301"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="IEr-p5-E4j"/>
+                                <include reference="LTH-xG-VsT"/>
+                                <include reference="t8v-3i-7JG"/>
+                                <include reference="tqn-AE-nrC"/>
+                                <include reference="Q0w-iV-fT0"/>
+                                <include reference="RLC-oo-OoU"/>
+                                <include reference="klO-bh-2Sc"/>
+                                <include reference="xMb-HZ-li0"/>
                             </mask>
                         </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1000" height="539"/>
+                    <connections>
+                        <outlet property="_plot" destination="zyA-wF-k1t" id="PSB-10-lNW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrg-cy-ppZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="1375.875"/>
+            <point key="canvasLocation" x="2220" y="1389.375"/>
         </scene>
         <!--Autosampler Load Unload Page-->
         <scene sceneID="Fas-Uh-g35">

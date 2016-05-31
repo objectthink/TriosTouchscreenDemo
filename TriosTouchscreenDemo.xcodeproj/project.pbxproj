@@ -24,6 +24,11 @@
 		01B4ADB51CFA2EA700A111EB /* SignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB41CFA2EA700A111EB /* SignalCell.swift */; };
 		01B4ADB71CFB17AF00A111EB /* ChartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB61CFB17AF00A111EB /* ChartPage.swift */; };
 		01B4ADB91CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB81CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift */; };
+		01B4ADC51CFD08C800A111EB /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADBC1CFD08C800A111EB /* BEMAverageLine.m */; };
+		01B4ADC61CFD08C800A111EB /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADBE1CFD08C800A111EB /* BEMCircle.m */; };
+		01B4ADC71CFD08C800A111EB /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC01CFD08C800A111EB /* BEMLine.m */; };
+		01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */; };
+		01B4ADC91CFD08C800A111EB /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */; };
 		849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A12461CF4B70600E30B19 /* AppDelegate.swift */; };
 		849A124C1CF4B70600E30B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124A1CF4B70600E30B19 /* Main.storyboard */; };
 		849A124E1CF4B70600E30B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849A124D1CF4B70600E30B19 /* Assets.xcassets */; };
@@ -56,6 +61,16 @@
 		01B4ADB41CFA2EA700A111EB /* SignalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalCell.swift; sourceTree = "<group>"; };
 		01B4ADB61CFB17AF00A111EB /* ChartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPage.swift; sourceTree = "<group>"; };
 		01B4ADB81CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerLoadUnloadPage.swift; sourceTree = "<group>"; };
+		01B4ADBB1CFD08C800A111EB /* BEMAverageLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAverageLine.h; sourceTree = "<group>"; };
+		01B4ADBC1CFD08C800A111EB /* BEMAverageLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAverageLine.m; sourceTree = "<group>"; };
+		01B4ADBD1CFD08C800A111EB /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCircle.h; sourceTree = "<group>"; };
+		01B4ADBE1CFD08C800A111EB /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCircle.m; sourceTree = "<group>"; };
+		01B4ADBF1CFD08C800A111EB /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMLine.h; sourceTree = "<group>"; };
+		01B4ADC01CFD08C800A111EB /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
+		01B4ADC11CFD08C800A111EB /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPermanentPopupView.m; sourceTree = "<group>"; };
+		01B4ADC31CFD08C800A111EB /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
 		849A12431CF4B70600E30B19 /* TriosTouchscreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A12461CF4B70600E30B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849A124B1CF4B70600E30B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,9 +128,27 @@
 			name = MercuryComms;
 			sourceTree = "<group>";
 		};
+		01B4ADBA1CFD082600A111EB /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				01B4ADBB1CFD08C800A111EB /* BEMAverageLine.h */,
+				01B4ADBC1CFD08C800A111EB /* BEMAverageLine.m */,
+				01B4ADBD1CFD08C800A111EB /* BEMCircle.h */,
+				01B4ADBE1CFD08C800A111EB /* BEMCircle.m */,
+				01B4ADBF1CFD08C800A111EB /* BEMLine.h */,
+				01B4ADC01CFD08C800A111EB /* BEMLine.m */,
+				01B4ADC11CFD08C800A111EB /* BEMPermanentPopupView.h */,
+				01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */,
+				01B4ADC31CFD08C800A111EB /* BEMSimpleLineGraphView.h */,
+				01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		849A123A1CF4B70600E30B19 = {
 			isa = PBXGroup;
 			children = (
+				01B4ADBA1CFD082600A111EB /* Library */,
 				01B4AD9D1CFA1E4400A111EB /* MercuryComms */,
 				01A0EF7D1CF52C0700FB3D2E /* Controllers */,
 				849A12451CF4B70600E30B19 /* TriosTouchscreenDemo */,
@@ -216,6 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B4ADC91CFD08C800A111EB /* BEMSimpleLineGraphView.m in Sources */,
+				01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */,
+				01B4ADC71CFD08C800A111EB /* BEMLine.m in Sources */,
 				01A0EF891CF8EF4500FB3D2E /* SignalsTabbedPage.swift in Sources */,
 				849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */,
 				01A0EF8B1CF8EFD800FB3D2E /* SignalsPage.swift in Sources */,
@@ -232,7 +268,9 @@
 				01B4ADB21CFA1E6E00A111EB /* GCDAsyncUdpSocket.m in Sources */,
 				01B4ADB31CFA1E6E00A111EB /* GCDAsyncSocket.m in Sources */,
 				01B4ADAE1CFA1E6E00A111EB /* MercuryStatus.m in Sources */,
+				01B4ADC51CFD08C800A111EB /* BEMAverageLine.m in Sources */,
 				01B4ADB91CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift in Sources */,
+				01B4ADC61CFD08C800A111EB /* BEMCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
