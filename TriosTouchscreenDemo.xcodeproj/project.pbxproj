@@ -11,6 +11,11 @@
 		01183FBE1D043F73005C8FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FBD1D043F73005C8FE7 /* ViewController.swift */; };
 		01183FC11D043F73005C8FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FBF1D043F73005C8FE7 /* Main.storyboard */; };
 		01183FC31D043F73005C8FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01183FC21D043F73005C8FE7 /* Assets.xcassets */; };
+		01183FCF1D0445E4005C8FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FCE1D0445E4005C8FE7 /* AppDelegate.swift */; };
+		01183FD11D0445E4005C8FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FD01D0445E4005C8FE7 /* ViewController.swift */; };
+		01183FD41D0445E4005C8FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD21D0445E4005C8FE7 /* Main.storyboard */; };
+		01183FD61D0445E4005C8FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD51D0445E4005C8FE7 /* Assets.xcassets */; };
+		01183FD91D0445E4005C8FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD71D0445E4005C8FE7 /* LaunchScreen.storyboard */; };
 		018147ED1CF9C1A7003965C8 /* MERCURY COMMS in Resources */ = {isa = PBXBuildFile; fileRef = 018147EC1CF9C1A7003965C8 /* MERCURY COMMS */; };
 		01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */; };
 		01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */; };
@@ -46,6 +51,13 @@
 		01183FC01D043F73005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01183FC21D043F73005C8FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01183FC41D043F73005C8FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01183FCC1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemoDMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01183FCE1D0445E4005C8FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01183FD01D0445E4005C8FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01183FD31D0445E4005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01183FD51D0445E4005C8FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01183FD81D0445E4005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01183FDA1D0445E4005C8FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		018147EC1CF9C1A7003965C8 /* MERCURY COMMS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "MERCURY COMMS"; path = "/Users/seshelman/Dev/MERCURY COMMS"; sourceTree = "<absolute>"; };
 		01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerPage.swift; sourceTree = "<group>"; };
@@ -97,6 +109,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01183FC91D0445E4005C8FE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		849A12401CF4B70600E30B19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -117,6 +136,19 @@
 				01183FC41D043F73005C8FE7 /* Info.plist */,
 			);
 			path = TriosTouchscreenDemoTV;
+			sourceTree = "<group>";
+		};
+		01183FCD1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA */ = {
+			isa = PBXGroup;
+			children = (
+				01183FCE1D0445E4005C8FE7 /* AppDelegate.swift */,
+				01183FD01D0445E4005C8FE7 /* ViewController.swift */,
+				01183FD21D0445E4005C8FE7 /* Main.storyboard */,
+				01183FD51D0445E4005C8FE7 /* Assets.xcassets */,
+				01183FD71D0445E4005C8FE7 /* LaunchScreen.storyboard */,
+				01183FDA1D0445E4005C8FE7 /* Info.plist */,
+			);
+			path = TriosTouchscreenDemoDMA;
 			sourceTree = "<group>";
 		};
 		01A0EF7D1CF52C0700FB3D2E /* Controllers */ = {
@@ -182,6 +214,7 @@
 				01A0EF7D1CF52C0700FB3D2E /* Controllers */,
 				849A12451CF4B70600E30B19 /* TriosTouchscreenDemo */,
 				01183FBA1D043F73005C8FE7 /* TriosTouchscreenDemoTV */,
+				01183FCD1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA */,
 				849A12441CF4B70600E30B19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,6 +224,7 @@
 			children = (
 				849A12431CF4B70600E30B19 /* TriosTouchscreenDemo.app */,
 				01183FB91D043F73005C8FE7 /* TriosTouchscreenDemoTV.app */,
+				01183FCC1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +261,23 @@
 			productReference = 01183FB91D043F73005C8FE7 /* TriosTouchscreenDemoTV.app */;
 			productType = "com.apple.product-type.application";
 		};
+		01183FCB1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01183FDB1D0445E4005C8FE7 /* Build configuration list for PBXNativeTarget "TriosTouchscreenDemoDMA" */;
+			buildPhases = (
+				01183FC81D0445E4005C8FE7 /* Sources */,
+				01183FC91D0445E4005C8FE7 /* Frameworks */,
+				01183FCA1D0445E4005C8FE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TriosTouchscreenDemoDMA;
+			productName = TriosTouchscreenDemoDMA;
+			productReference = 01183FCC1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA.app */;
+			productType = "com.apple.product-type.application";
+		};
 		849A12421CF4B70600E30B19 /* TriosTouchscreenDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849A12551CF4B70600E30B19 /* Build configuration list for PBXNativeTarget "TriosTouchscreenDemo" */;
@@ -258,6 +309,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 6AP8DGBG6H;
 					};
+					01183FCB1D0445E4005C8FE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					849A12421CF4B70600E30B19 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 6AP8DGBG6H;
@@ -279,6 +333,7 @@
 			targets = (
 				849A12421CF4B70600E30B19 /* TriosTouchscreenDemo */,
 				01183FB81D043F73005C8FE7 /* TriosTouchscreenDemoTV */,
+				01183FCB1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +345,16 @@
 			files = (
 				01183FC31D043F73005C8FE7 /* Assets.xcassets in Resources */,
 				01183FC11D043F73005C8FE7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01183FCA1D0445E4005C8FE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01183FD91D0445E4005C8FE7 /* LaunchScreen.storyboard in Resources */,
+				01183FD61D0445E4005C8FE7 /* Assets.xcassets in Resources */,
+				01183FD41D0445E4005C8FE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +378,15 @@
 			files = (
 				01183FBE1D043F73005C8FE7 /* ViewController.swift in Sources */,
 				01183FBC1D043F73005C8FE7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01183FC81D0445E4005C8FE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01183FD11D0445E4005C8FE7 /* ViewController.swift in Sources */,
+				01183FCF1D0445E4005C8FE7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +428,22 @@
 				01183FC01D043F73005C8FE7 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01183FD21D0445E4005C8FE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01183FD31D0445E4005C8FE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01183FD71D0445E4005C8FE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01183FD81D0445E4005C8FE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		849A124A1CF4B70600E30B19 /* Main.storyboard */ = {
@@ -408,6 +498,30 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		01183FDC1D0445E4005C8FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TriosTouchscreenDemoDMA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.objectthink.TriosTouchscreenDemoDMA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		01183FDD1D0445E4005C8FE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TriosTouchscreenDemoDMA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.objectthink.TriosTouchscreenDemoDMA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -542,6 +656,14 @@
 			buildConfigurations = (
 				01183FC51D043F73005C8FE7 /* Debug */,
 				01183FC61D043F73005C8FE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01183FDB1D0445E4005C8FE7 /* Build configuration list for PBXNativeTarget "TriosTouchscreenDemoDMA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01183FDC1D0445E4005C8FE7 /* Debug */,
+				01183FDD1D0445E4005C8FE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
