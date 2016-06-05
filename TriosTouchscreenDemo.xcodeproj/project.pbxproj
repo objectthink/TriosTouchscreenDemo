@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01183FBC1D043F73005C8FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FBB1D043F73005C8FE7 /* AppDelegate.swift */; };
-		01183FBE1D043F73005C8FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FBD1D043F73005C8FE7 /* ViewController.swift */; };
 		01183FC11D043F73005C8FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FBF1D043F73005C8FE7 /* Main.storyboard */; };
 		01183FC31D043F73005C8FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01183FC21D043F73005C8FE7 /* Assets.xcassets */; };
 		01183FCF1D0445E4005C8FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FCE1D0445E4005C8FE7 /* AppDelegate.swift */; };
@@ -16,6 +15,20 @@
 		01183FD41D0445E4005C8FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD21D0445E4005C8FE7 /* Main.storyboard */; };
 		01183FD61D0445E4005C8FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD51D0445E4005C8FE7 /* Assets.xcassets */; };
 		01183FD91D0445E4005C8FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD71D0445E4005C8FE7 /* LaunchScreen.storyboard */; };
+		012002A31D0468350057B27B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002A21D0468350057B27B /* MainViewController.swift */; };
+		012002A51D04687C0057B27B /* MercuryInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4AD9F1CFA1E6E00A111EB /* MercuryInstrument.m */; };
+		012002A61D04687C0057B27B /* MercuryStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA01CFA1E6E00A111EB /* MercuryStatus.m */; };
+		012002A81D04687C0057B27B /* MercuryProcedure.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA21CFA1E6E00A111EB /* MercuryProcedure.m */; };
+		012002A91D04687C0057B27B /* MercuryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA31CFA1E6E00A111EB /* MercuryFile.m */; };
+		012002AB1D04687C0057B27B /* MercuryBroadcastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA51CFA1E6E00A111EB /* MercuryBroadcastManager.m */; };
+		012002AC1D04687C0057B27B /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA61CFA1E6E00A111EB /* GCDAsyncUdpSocket.m */; };
+		012002AF1D04687C0057B27B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA91CFA1E6E00A111EB /* GCDAsyncSocket.m */; };
+		012002B41D046A750057B27B /* IMercuryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF841CF5BBD600FB3D2E /* IMercuryPage.swift */; };
+		012002B61D0474900057B27B /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002B51D0474900057B27B /* MainPage.swift */; };
+		012002B71D047ACB0057B27B /* SignalsTabbedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF881CF8EF4500FB3D2E /* SignalsTabbedPage.swift */; };
+		012002B81D047D500057B27B /* SignalsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF8A1CF8EFD800FB3D2E /* SignalsPage.swift */; };
+		012002B91D047D500057B27B /* SignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB41CFA2EA700A111EB /* SignalCell.swift */; };
+		012002C61D047F0D0057B27B /* ChartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002C51D047F0D0057B27B /* ChartPage.swift */; };
 		018147ED1CF9C1A7003965C8 /* MERCURY COMMS in Resources */ = {isa = PBXBuildFile; fileRef = 018147EC1CF9C1A7003965C8 /* MERCURY COMMS */; };
 		01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */; };
 		01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */; };
@@ -47,7 +60,6 @@
 /* Begin PBXFileReference section */
 		01183FB91D043F73005C8FE7 /* TriosTouchscreenDemoTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemoTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01183FBB1D043F73005C8FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01183FBD1D043F73005C8FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01183FC01D043F73005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01183FC21D043F73005C8FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01183FC41D043F73005C8FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +70,9 @@
 		01183FD51D0445E4005C8FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01183FD81D0445E4005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01183FDA1D0445E4005C8FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012002A21D0468350057B27B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		012002B51D0474900057B27B /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		012002C51D047F0D0057B27B /* ChartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPage.swift; sourceTree = "<group>"; };
 		018147EC1CF9C1A7003965C8 /* MERCURY COMMS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "MERCURY COMMS"; path = "/Users/seshelman/Dev/MERCURY COMMS"; sourceTree = "<absolute>"; };
 		01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerPage.swift; sourceTree = "<group>"; };
@@ -130,10 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				01183FBB1D043F73005C8FE7 /* AppDelegate.swift */,
-				01183FBD1D043F73005C8FE7 /* ViewController.swift */,
 				01183FBF1D043F73005C8FE7 /* Main.storyboard */,
 				01183FC21D043F73005C8FE7 /* Assets.xcassets */,
 				01183FC41D043F73005C8FE7 /* Info.plist */,
+				012002A21D0468350057B27B /* MainViewController.swift */,
+				012002B51D0474900057B27B /* MainPage.swift */,
+				012002C51D047F0D0057B27B /* ChartPage.swift */,
 			);
 			path = TriosTouchscreenDemoTV;
 			sourceTree = "<group>";
@@ -376,8 +393,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01183FBE1D043F73005C8FE7 /* ViewController.swift in Sources */,
+				012002B81D047D500057B27B /* SignalsPage.swift in Sources */,
+				012002B91D047D500057B27B /* SignalCell.swift in Sources */,
+				012002B71D047ACB0057B27B /* SignalsTabbedPage.swift in Sources */,
+				012002C61D047F0D0057B27B /* ChartPage.swift in Sources */,
+				012002B41D046A750057B27B /* IMercuryPage.swift in Sources */,
+				012002A51D04687C0057B27B /* MercuryInstrument.m in Sources */,
+				012002A61D04687C0057B27B /* MercuryStatus.m in Sources */,
+				012002A81D04687C0057B27B /* MercuryProcedure.m in Sources */,
+				012002A91D04687C0057B27B /* MercuryFile.m in Sources */,
+				012002AB1D04687C0057B27B /* MercuryBroadcastManager.m in Sources */,
+				012002AC1D04687C0057B27B /* GCDAsyncUdpSocket.m in Sources */,
+				012002AF1D04687C0057B27B /* GCDAsyncSocket.m in Sources */,
 				01183FBC1D043F73005C8FE7 /* AppDelegate.swift in Sources */,
+				012002A31D0468350057B27B /* MainViewController.swift in Sources */,
+				012002B61D0474900057B27B /* MainPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +508,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TRIOS_MOBILE-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -496,6 +527,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TRIOS_MOBILE-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -658,6 +690,7 @@
 				01183FC61D043F73005C8FE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01183FDB1D0445E4005C8FE7 /* Build configuration list for PBXNativeTarget "TriosTouchscreenDemoDMA" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +699,7 @@
 				01183FDD1D0445E4005C8FE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		849A123E1CF4B70600E30B19 /* Build configuration list for PBXProject "TriosTouchscreenDemo" */ = {
 			isa = XCConfigurationList;

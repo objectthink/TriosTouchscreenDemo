@@ -63,20 +63,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNO-Sk-0pe">
-                                        <rect key="frame" x="564" y="-20" width="216" height="77"/>
+                                        <rect key="frame" x="564" y="-20" width="144" height="77"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="temp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="uxV-rr-yai">
-                                                <rect key="frame" x="72" y="0.0" width="37" height="77"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="77"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="37.99℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-NX-wsL">
-                                                <rect key="frame" x="109" y="0.0" width="107" height="77"/>
+                                                <rect key="frame" x="37" y="0.0" width="107" height="77"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-VP-lEK">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-VP-lEK">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="77"/>
                                         <state key="normal" image="red-!"/>
                                         <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
@@ -112,13 +112,13 @@
                                         <exclude reference="E0m-VP-lEK"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="8lV-sp-vha"/>
+                                        <exclude reference="d6k-GS-P2K"/>
                                         <exclude reference="3Lg-Aw-Swg"/>
                                         <exclude reference="Ltz-nI-PR8"/>
                                         <exclude reference="P5D-e8-Hnv"/>
                                         <exclude reference="gfn-pp-wUb"/>
                                         <exclude reference="hCR-HM-mmV"/>
-                                        <exclude reference="8lV-sp-vha"/>
-                                        <exclude reference="d6k-GS-P2K"/>
                                         <exclude reference="kgE-JE-RAj"/>
                                         <exclude reference="o8L-Og-MaJ"/>
                                         <exclude reference="hsl-d6-XcE"/>
@@ -139,9 +139,9 @@
                                         <include reference="E0m-VP-lEK"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="Ltz-nI-PR8"/>
                                         <include reference="8lV-sp-vha"/>
                                         <include reference="d6k-GS-P2K"/>
+                                        <include reference="Ltz-nI-PR8"/>
                                         <include reference="kgE-JE-RAj"/>
                                         <include reference="o8L-Og-MaJ"/>
                                         <include reference="hsl-d6-XcE"/>
@@ -1017,7 +1017,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei5-Ag-c9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2157.75" y="926.625"/>
+            <point key="canvasLocation" x="2056.5" y="916.125"/>
         </scene>
     </scenes>
     <resources>
