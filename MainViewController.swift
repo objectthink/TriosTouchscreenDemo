@@ -106,6 +106,34 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       back()
    }
    
+   @IBAction func homeButtonClicked(sender: AnyObject)
+   {
+      home()
+   }
+   
+   func home()
+   {
+      //peek and call aboutToClose, canClose
+      //pop and call aboutToRemove
+      //peek again and call aboutToShow, postShow
+      
+      if _pages.peek() is MainPage
+      {
+         return
+      }
+
+      var page:IMercuryPage = _pages.peek()
+      let fromPage:IMercuryPage = page;
+      
+      while(!(page is MainPage))
+      {
+         _pages.pop()
+         page = _pages.peek()
+      }
+      
+      transitionFromPage(fromPage, to: page)
+   }
+   
    func back()
    {
       //peek and call aboutToClose, canClose
