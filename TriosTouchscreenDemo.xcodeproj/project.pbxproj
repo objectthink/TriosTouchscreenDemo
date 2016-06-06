@@ -30,6 +30,10 @@
 		012002B91D047D500057B27B /* SignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB41CFA2EA700A111EB /* SignalCell.swift */; };
 		012002C61D047F0D0057B27B /* ChartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002C51D047F0D0057B27B /* ChartPage.swift */; };
 		016DB8891D04D3CA0086D92F /* AutosamplerCalibrationsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */; };
+		01A059021D0634BA00DAA7AF /* NetworkPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059011D0634BA00DAA7AF /* NetworkPage.swift */; };
+		01A059041D0634CA00DAA7AF /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059031D0634CA00DAA7AF /* AboutPage.swift */; };
+		01A059061D06412700DAA7AF /* VersionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059051D06412700DAA7AF /* VersionsPage.swift */; };
+		01A059081D06413700DAA7AF /* OptionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059071D06413700DAA7AF /* OptionsPage.swift */; };
 		01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */; };
 		01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */; };
 		01A0EF831CF5B54C00FB3D2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */; };
@@ -75,6 +79,10 @@
 		012002B51D0474900057B27B /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		012002C51D047F0D0057B27B /* ChartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPage.swift; sourceTree = "<group>"; };
 		012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerCalibrationsPage.swift; sourceTree = "<group>"; };
+		01A059011D0634BA00DAA7AF /* NetworkPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPage.swift; sourceTree = "<group>"; };
+		01A059031D0634CA00DAA7AF /* AboutPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
+		01A059051D06412700DAA7AF /* VersionsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionsPage.swift; sourceTree = "<group>"; };
+		01A059071D06413700DAA7AF /* OptionsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsPage.swift; sourceTree = "<group>"; };
 		01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerPage.swift; sourceTree = "<group>"; };
 		01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +192,10 @@
 				01B4ADB81CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift */,
 				012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */,
 				848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */,
+				01A059011D0634BA00DAA7AF /* NetworkPage.swift */,
+				01A059031D0634CA00DAA7AF /* AboutPage.swift */,
+				01A059051D06412700DAA7AF /* VersionsPage.swift */,
+				01A059071D06413700DAA7AF /* OptionsPage.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -427,6 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A059041D0634CA00DAA7AF /* AboutPage.swift in Sources */,
+				01A059081D06413700DAA7AF /* OptionsPage.swift in Sources */,
 				016DB8891D04D3CA0086D92F /* AutosamplerCalibrationsPage.swift in Sources */,
 				01B4ADC91CFD08C800A111EB /* BEMSimpleLineGraphView.m in Sources */,
 				01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */,
@@ -434,6 +448,7 @@
 				01A0EF891CF8EF4500FB3D2E /* SignalsTabbedPage.swift in Sources */,
 				848EBCB21D05E03400CFE0F2 /* SystemInfoPage.swift in Sources */,
 				849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */,
+				01A059021D0634BA00DAA7AF /* NetworkPage.swift in Sources */,
 				01A0EF8B1CF8EFD800FB3D2E /* SignalsPage.swift in Sources */,
 				01B4ADAF1CFA1E6E00A111EB /* MercuryProcedure.m in Sources */,
 				01B4ADB51CFA2EA700A111EB /* SignalCell.swift in Sources */,
@@ -450,6 +465,7 @@
 				01B4ADAE1CFA1E6E00A111EB /* MercuryStatus.m in Sources */,
 				01B4ADC51CFD08C800A111EB /* BEMAverageLine.m in Sources */,
 				01B4ADB91CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift in Sources */,
+				01A059061D06412700DAA7AF /* VersionsPage.swift in Sources */,
 				01B4ADC61CFD08C800A111EB /* BEMCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
