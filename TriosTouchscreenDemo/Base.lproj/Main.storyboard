@@ -409,6 +409,9 @@
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="99" y="37" width="220" height="217"/>
                                 </variation>
+                                <connections>
+                                    <action selector="systemInfoButtonClicked:" destination="Gz1-KM-un5" eventType="touchUpInside" id="Mdx-yb-Tfw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYSTEM INFO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfd-Nx-yag">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -995,12 +998,12 @@
                                 <exclude reference="j06-Mo-ZGJ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="uPI-HF-yU4"/>
                                 <exclude reference="53p-87-YZY"/>
                                 <exclude reference="8CI-su-i8s"/>
                                 <exclude reference="bNn-Kb-qvo"/>
                                 <exclude reference="Wm0-TZ-ctO"/>
                                 <exclude reference="ZQO-Ev-08m"/>
-                                <exclude reference="uPI-HF-yU4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -1009,12 +1012,12 @@
                                 <include reference="j06-Mo-ZGJ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="uPI-HF-yU4"/>
                                 <include reference="53p-87-YZY"/>
                                 <include reference="8CI-su-i8s"/>
                                 <include reference="bNn-Kb-qvo"/>
                                 <include reference="Wm0-TZ-ctO"/>
                                 <include reference="ZQO-Ev-08m"/>
-                                <include reference="uPI-HF-yU4"/>
                             </mask>
                         </variation>
                     </view>
@@ -1025,15 +1028,16 @@
             </objects>
             <point key="canvasLocation" x="2835" y="469.125"/>
         </scene>
-        <!--View Controller-->
+        <!--System Info Page-->
         <scene sceneID="rwr-ta-uP3">
             <objects>
-                <viewController id="YBe-ed-hpa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SystemInfoPage" id="YBe-ed-hpa" customClass="SystemInfoPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Zq-zv-cqp"/>
                         <viewControllerLayoutGuide type="bottom" id="Cgu-tP-BRy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lt4-yN-B5T">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="539"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1042,7 +1046,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Km-vl-3Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615.75" y="469.125"/>
+            <point key="canvasLocation" x="3615" y="472.875"/>
         </scene>
         <!--Signals Page-->
         <scene sceneID="CeQ-rD-S4Q">

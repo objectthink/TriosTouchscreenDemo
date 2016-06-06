@@ -30,7 +30,6 @@
 		012002B91D047D500057B27B /* SignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB41CFA2EA700A111EB /* SignalCell.swift */; };
 		012002C61D047F0D0057B27B /* ChartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002C51D047F0D0057B27B /* ChartPage.swift */; };
 		016DB8891D04D3CA0086D92F /* AutosamplerCalibrationsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */; };
-		018147ED1CF9C1A7003965C8 /* MERCURY COMMS in Resources */ = {isa = PBXBuildFile; fileRef = 018147EC1CF9C1A7003965C8 /* MERCURY COMMS */; };
 		01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */; };
 		01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */; };
 		01A0EF831CF5B54C00FB3D2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */; };
@@ -52,6 +51,7 @@
 		01B4ADC71CFD08C800A111EB /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC01CFD08C800A111EB /* BEMLine.m */; };
 		01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */; };
 		01B4ADC91CFD08C800A111EB /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */; };
+		848EBCB21D05E03400CFE0F2 /* SystemInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */; };
 		849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A12461CF4B70600E30B19 /* AppDelegate.swift */; };
 		849A124C1CF4B70600E30B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124A1CF4B70600E30B19 /* Main.storyboard */; };
 		849A124E1CF4B70600E30B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849A124D1CF4B70600E30B19 /* Assets.xcassets */; };
@@ -75,7 +75,6 @@
 		012002B51D0474900057B27B /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		012002C51D047F0D0057B27B /* ChartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPage.swift; sourceTree = "<group>"; };
 		012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerCalibrationsPage.swift; sourceTree = "<group>"; };
-		018147EC1CF9C1A7003965C8 /* MERCURY COMMS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "MERCURY COMMS"; path = "/Users/seshelman/Dev/MERCURY COMMS"; sourceTree = "<absolute>"; };
 		01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerPage.swift; sourceTree = "<group>"; };
 		01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 		01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPermanentPopupView.m; sourceTree = "<group>"; };
 		01B4ADC31CFD08C800A111EB /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
 		01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfoPage.swift; sourceTree = "<group>"; };
 		849A12431CF4B70600E30B19 /* TriosTouchscreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A12461CF4B70600E30B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849A124B1CF4B70600E30B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +183,7 @@
 				01B4ADB61CFB17AF00A111EB /* ChartPage.swift */,
 				01B4ADB81CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift */,
 				012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */,
+				848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,7 +386,6 @@
 				849A12511CF4B70600E30B19 /* LaunchScreen.storyboard in Resources */,
 				849A124E1CF4B70600E30B19 /* Assets.xcassets in Resources */,
 				849A124C1CF4B70600E30B19 /* Main.storyboard in Resources */,
-				018147ED1CF9C1A7003965C8 /* MERCURY COMMS in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +432,7 @@
 				01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */,
 				01B4ADC71CFD08C800A111EB /* BEMLine.m in Sources */,
 				01A0EF891CF8EF4500FB3D2E /* SignalsTabbedPage.swift in Sources */,
+				848EBCB21D05E03400CFE0F2 /* SystemInfoPage.swift in Sources */,
 				849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */,
 				01A0EF8B1CF8EFD800FB3D2E /* SignalsPage.swift in Sources */,
 				01B4ADAF1CFA1E6E00A111EB /* MercuryProcedure.m in Sources */,
