@@ -8,6 +8,10 @@
         <scene sceneID="h9K-CS-fc4">
             <objects>
                 <viewController id="Qch-rK-ElX" customClass="MainViewController" customModule="TriosTouchscreenDemoTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9yZ-pc-Tg4"/>
+                        <viewControllerLayoutGuide type="bottom" id="hY7-HT-sqa"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Byh-Dk-hgc">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +50,9 @@
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" image="home"/>
+                                        <connections>
+                                            <action selector="homeButtonClicked:" destination="Qch-rK-ElX" eventType="primaryActionTriggered" id="Cui-4V-Tn0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSe-7l-28o">
                                         <rect key="frame" x="1577" y="-14" width="176" height="171"/>
@@ -54,6 +61,9 @@
                                         </constraints>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="Qch-rK-ElX" eventType="primaryActionTriggered" id="3X0-S1-skb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,8 +94,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_backButton" destination="XSe-7l-28o" id="ug4-hH-eqN"/>
-                        <outlet property="_homeButton" destination="6Kc-7f-0hv" id="uE3-EN-GfW"/>
+                        <outlet property="_backButton" destination="XSe-7l-28o" id="gid-5Z-3Ok"/>
+                        <outlet property="_homeButton" destination="6Kc-7f-0hv" id="mom-WA-0cR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZz-2n-Lf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,6 +106,10 @@
         <scene sceneID="S5h-fd-fHi">
             <objects>
                 <viewController id="djp-Xh-AC6" customClass="MainPage" customModule="TriosTouchscreenDemoTV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hYo-Zq-dzB"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Il-ch-V7O"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g9m-0w-Fv4">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="748"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +188,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="SignalCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SignalCell" id="d2X-aU-FPA" customClass="SignalCell" customModule="TriosTouchscreenDemoTV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="54" width="1920" height="66"/>
+                                <rect key="frame" x="0.0" y="54" width="1880" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d2X-aU-FPA" id="rBM-1z-WHT">
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>

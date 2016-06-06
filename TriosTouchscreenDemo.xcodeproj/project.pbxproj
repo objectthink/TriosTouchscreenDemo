@@ -29,6 +29,7 @@
 		012002B81D047D500057B27B /* SignalsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF8A1CF8EFD800FB3D2E /* SignalsPage.swift */; };
 		012002B91D047D500057B27B /* SignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB41CFA2EA700A111EB /* SignalCell.swift */; };
 		012002C61D047F0D0057B27B /* ChartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002C51D047F0D0057B27B /* ChartPage.swift */; };
+		016DB8891D04D3CA0086D92F /* AutosamplerCalibrationsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */; };
 		018147ED1CF9C1A7003965C8 /* MERCURY COMMS in Resources */ = {isa = PBXBuildFile; fileRef = 018147EC1CF9C1A7003965C8 /* MERCURY COMMS */; };
 		01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */; };
 		01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */; };
@@ -73,6 +74,7 @@
 		012002A21D0468350057B27B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		012002B51D0474900057B27B /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		012002C51D047F0D0057B27B /* ChartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPage.swift; sourceTree = "<group>"; };
+		012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerCalibrationsPage.swift; sourceTree = "<group>"; };
 		018147EC1CF9C1A7003965C8 /* MERCURY COMMS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "MERCURY COMMS"; path = "/Users/seshelman/Dev/MERCURY COMMS"; sourceTree = "<absolute>"; };
 		01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerPage.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				01B4ADB41CFA2EA700A111EB /* SignalCell.swift */,
 				01B4ADB61CFB17AF00A111EB /* ChartPage.swift */,
 				01B4ADB81CFBA99E00A111EB /* AutosamplerLoadUnloadPage.swift */,
+				012002C71D04D2060057B27B /* AutosamplerCalibrationsPage.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016DB8891D04D3CA0086D92F /* AutosamplerCalibrationsPage.swift in Sources */,
 				01B4ADC91CFD08C800A111EB /* BEMSimpleLineGraphView.m in Sources */,
 				01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */,
 				01B4ADC71CFD08C800A111EB /* BEMLine.m in Sources */,

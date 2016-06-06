@@ -43,6 +43,14 @@ class AutosamplerPage: UIViewController, IMercuryPage
       _app.next(&page)// as! IMercuryPage)
    }
    
+   @IBAction func calibrationButtonClicked(sender: AnyObject)
+   {
+      let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AutosamplerCalibrationsPage")
+      var page = controller as! IMercuryPage
+      
+      _app.next(&page)// as! IMercuryPage)
+   }
+   
    override func didReceiveMemoryWarning()
    {
       super.didReceiveMemoryWarning()
