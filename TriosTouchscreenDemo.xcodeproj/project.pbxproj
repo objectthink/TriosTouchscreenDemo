@@ -11,7 +11,6 @@
 		01183FC11D043F73005C8FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FBF1D043F73005C8FE7 /* Main.storyboard */; };
 		01183FC31D043F73005C8FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01183FC21D043F73005C8FE7 /* Assets.xcassets */; };
 		01183FCF1D0445E4005C8FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FCE1D0445E4005C8FE7 /* AppDelegate.swift */; };
-		01183FD11D0445E4005C8FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FD01D0445E4005C8FE7 /* ViewController.swift */; };
 		01183FD41D0445E4005C8FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD21D0445E4005C8FE7 /* Main.storyboard */; };
 		01183FD61D0445E4005C8FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD51D0445E4005C8FE7 /* Assets.xcassets */; };
 		01183FD91D0445E4005C8FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FD71D0445E4005C8FE7 /* LaunchScreen.storyboard */; };
@@ -56,6 +55,11 @@
 		01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */; };
 		01B4ADC91CFD08C800A111EB /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */; };
 		848EBCB21D05E03400CFE0F2 /* SystemInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */; };
+		848EBCF01D0737DA00CFE0F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EBCEF1D0737DA00CFE0F2 /* MainViewController.swift */; };
+		848EBCF11D07388700CFE0F2 /* IMercuryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF841CF5BBD600FB3D2E /* IMercuryPage.swift */; };
+		848EBCF31D0738F100CFE0F2 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EBCF21D0738F100CFE0F2 /* MainPage.swift */; };
+		848EBCF51D073A3C00CFE0F2 /* MercuryInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4AD9F1CFA1E6E00A111EB /* MercuryInstrument.m */; };
+		848EBCF61D073A4D00CFE0F2 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADA91CFA1E6E00A111EB /* GCDAsyncSocket.m */; };
 		849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A12461CF4B70600E30B19 /* AppDelegate.swift */; };
 		849A124C1CF4B70600E30B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124A1CF4B70600E30B19 /* Main.storyboard */; };
 		849A124E1CF4B70600E30B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849A124D1CF4B70600E30B19 /* Assets.xcassets */; };
@@ -70,7 +74,6 @@
 		01183FC41D043F73005C8FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01183FCC1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemoDMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01183FCE1D0445E4005C8FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01183FD01D0445E4005C8FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01183FD31D0445E4005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01183FD51D0445E4005C8FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01183FD81D0445E4005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 		01B4ADC31CFD08C800A111EB /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
 		01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
 		848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfoPage.swift; sourceTree = "<group>"; };
+		848EBCEF1D0737DA00CFE0F2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		848EBCF21D0738F100CFE0F2 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		849A12431CF4B70600E30B19 /* TriosTouchscreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849A12461CF4B70600E30B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849A124B1CF4B70600E30B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,11 +174,12 @@
 			isa = PBXGroup;
 			children = (
 				01183FCE1D0445E4005C8FE7 /* AppDelegate.swift */,
-				01183FD01D0445E4005C8FE7 /* ViewController.swift */,
 				01183FD21D0445E4005C8FE7 /* Main.storyboard */,
 				01183FD51D0445E4005C8FE7 /* Assets.xcassets */,
 				01183FD71D0445E4005C8FE7 /* LaunchScreen.storyboard */,
 				01183FDA1D0445E4005C8FE7 /* Info.plist */,
+				848EBCEF1D0737DA00CFE0F2 /* MainViewController.swift */,
+				848EBCF21D0738F100CFE0F2 /* MainPage.swift */,
 			);
 			path = TriosTouchscreenDemoDMA;
 			sourceTree = "<group>";
@@ -430,8 +436,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01183FD11D0445E4005C8FE7 /* ViewController.swift in Sources */,
+				848EBCF61D073A4D00CFE0F2 /* GCDAsyncSocket.m in Sources */,
+				848EBCF51D073A3C00CFE0F2 /* MercuryInstrument.m in Sources */,
+				848EBCF11D07388700CFE0F2 /* IMercuryPage.swift in Sources */,
 				01183FCF1D0445E4005C8FE7 /* AppDelegate.swift in Sources */,
+				848EBCF01D0737DA00CFE0F2 /* MainViewController.swift in Sources */,
+				848EBCF31D0738F100CFE0F2 /* MainPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +572,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.objectthink.TriosTouchscreenDemoDMA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TRIOS_MOBILE-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -574,6 +585,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.objectthink.TriosTouchscreenDemoDMA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TRIOS_MOBILE-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
