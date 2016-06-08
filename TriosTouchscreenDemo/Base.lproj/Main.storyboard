@@ -351,6 +351,7 @@
                     <size key="freeformSize" width="1280" height="800"/>
                     <connections>
                         <outlet property="_backButton" destination="txH-Ck-wP3" id="Scs-e4-A9f"/>
+                        <outlet property="_helpImageView" destination="XEZ-cn-NuH" id="IGV-yv-LCa"/>
                         <outlet property="_homeButton" destination="lEZ-i8-1NY" id="bKh-L8-9vb"/>
                         <outlet property="_resetButton" destination="GQs-dN-gNK" id="Bbw-rP-YOR"/>
                         <outlet property="_startButton" destination="Az6-Kk-i2v" id="yYB-fi-Rdv"/>

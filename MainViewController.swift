@@ -18,6 +18,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    @IBOutlet weak var _homeButton: UIButton!
    @IBOutlet var _temperatureLabel: UILabel!
    @IBOutlet var _statusLabel: UILabel!
+   @IBOutlet var _helpImageView: UIImageView!
    
    var _currentPage:IMercuryPage!
    var _instrument:MercuryInstrument!
@@ -84,6 +85,20 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          access: 1000)      
    }
    
+   func updateHelpButton(page:IMercuryPage)
+   {
+      var show:Bool = true
+      if page is SignalsTabbedPage
+      {
+         show = false
+      }
+      
+      dispatch_async(dispatch_get_main_queue(),
+      { () -> Void in
+         self._helpImageView.hidden = show
+      })
+   }
+   
    func next(inout page:IMercuryPage)
    {
       //let nextPage = (page as! UIViewController)
@@ -99,6 +114,8 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       transitionFromPage(_pages.peek(), to: page)
 
       _pages.push(page)
+      
+      updateHelpButton(page)
    }
    
    @IBAction func backButtonClicked(sender: AnyObject)
@@ -119,6 +136,8 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       
       if _pages.peek() is MainPage
       {
+         updateHelpButton(_pages.peek())
+
          return
       }
 
@@ -131,6 +150,8 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          page = _pages.peek()
       }
       
+      updateHelpButton(page)
+      
       transitionFromPage(fromPage, to: page)
    }
    
@@ -140,12 +161,16 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       //pop and call aboutToRemove
       //peek again and call aboutToShow, postShow
       
-      if _pages.peek() is MainPage
+      let page:IMercuryPage = _pages.peek()
+
+      if page is MainPage
       {
          return
       }
       
       transitionFromPage(_pages.pop(), to: _pages.peek())
+      
+      updateHelpButton(_pages.peek())
    }
    
    func transitionFromPage(
