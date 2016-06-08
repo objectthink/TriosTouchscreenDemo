@@ -33,6 +33,7 @@
 		01A059041D0634CA00DAA7AF /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059031D0634CA00DAA7AF /* AboutPage.swift */; };
 		01A059061D06412700DAA7AF /* VersionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059051D06412700DAA7AF /* VersionsPage.swift */; };
 		01A059081D06413700DAA7AF /* OptionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059071D06413700DAA7AF /* OptionsPage.swift */; };
+		01A0590A1D078EF200DAA7AF /* TemperaturePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A059091D078EF200DAA7AF /* TemperaturePage.swift */; };
 		01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */; };
 		01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */; };
 		01A0EF831CF5B54C00FB3D2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */; };
@@ -86,6 +87,7 @@
 		01A059031D0634CA00DAA7AF /* AboutPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
 		01A059051D06412700DAA7AF /* VersionsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionsPage.swift; sourceTree = "<group>"; };
 		01A059071D06413700DAA7AF /* OptionsPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsPage.swift; sourceTree = "<group>"; };
+		01A059091D078EF200DAA7AF /* TemperaturePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturePage.swift; sourceTree = "<group>"; };
 		01A0EF7E1CF52C3400FB3D2E /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		01A0EF801CF5B45900FB3D2E /* AutosamplerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutosamplerPage.swift; sourceTree = "<group>"; };
 		01A0EF821CF5B54C00FB3D2E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				01183FDA1D0445E4005C8FE7 /* Info.plist */,
 				848EBCEF1D0737DA00CFE0F2 /* MainViewController.swift */,
 				848EBCF21D0738F100CFE0F2 /* MainPage.swift */,
+				01A059091D078EF200DAA7AF /* TemperaturePage.swift */,
 			);
 			path = TriosTouchscreenDemoDMA;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 			files = (
 				848EBCF61D073A4D00CFE0F2 /* GCDAsyncSocket.m in Sources */,
 				848EBCF51D073A3C00CFE0F2 /* MercuryInstrument.m in Sources */,
+				01A0590A1D078EF200DAA7AF /* TemperaturePage.swift in Sources */,
 				848EBCF11D07388700CFE0F2 /* IMercuryPage.swift in Sources */,
 				01183FCF1D0445E4005C8FE7 /* AppDelegate.swift in Sources */,
 				848EBCF01D0737DA00CFE0F2 /* MainViewController.swift in Sources */,

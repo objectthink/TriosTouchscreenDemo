@@ -176,6 +176,9 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peel-up-help-button" translatesAutoresizingMaskIntoConstraints="NO" id="XEZ-cn-NuH">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJf-m7-8pw">
                                         <rect key="frame" x="287" y="-20" width="302" height="171"/>
                                         <subviews>
@@ -200,18 +203,22 @@
                                 <constraints>
                                     <constraint firstItem="pZz-OO-gbl" firstAttribute="leading" secondItem="Az6-Kk-i2v" secondAttribute="trailing" id="2jn-bp-Kv4"/>
                                     <constraint firstItem="DJf-m7-8pw" firstAttribute="top" secondItem="dir-zu-fBx" secondAttribute="top" id="5iP-1s-blB"/>
+                                    <constraint firstItem="XEZ-cn-NuH" firstAttribute="top" secondItem="YqJ-6D-hkv" secondAttribute="top" constant="95" id="6Pd-7W-HAp"/>
                                     <constraint firstItem="DJf-m7-8pw" firstAttribute="trailing" secondItem="pKd-JK-1RK" secondAttribute="trailing" id="F3R-S4-j5R">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="-26"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="-83"/>
                                     </constraint>
+                                    <constraint firstItem="XEZ-cn-NuH" firstAttribute="trailing" secondItem="pKd-JK-1RK" secondAttribute="trailing" id="JVW-WK-bUv"/>
                                     <constraint firstItem="Az6-Kk-i2v" firstAttribute="top" secondItem="pKd-JK-1RK" secondAttribute="top" id="L4N-p0-GuZ"/>
                                     <constraint firstItem="dir-zu-fBx" firstAttribute="top" secondItem="pZz-OO-gbl" secondAttribute="top" id="N9b-21-I7p"/>
                                     <constraint firstItem="Az6-Kk-i2v" firstAttribute="leading" secondItem="YqJ-6D-hkv" secondAttribute="leading" constant="32" id="Qpr-ff-nWW"/>
                                     <constraint firstItem="pKd-JK-1RK" firstAttribute="leading" secondItem="YqJ-6D-hkv" secondAttribute="leading" id="Wa0-ai-L1R"/>
                                     <constraint firstItem="pKd-JK-1RK" firstAttribute="leading" secondItem="Az6-Kk-i2v" secondAttribute="trailing" constant="-163" id="Wyh-1F-Ykg"/>
                                     <constraint firstItem="dir-zu-fBx" firstAttribute="centerX" secondItem="pKd-JK-1RK" secondAttribute="centerX" id="Xzd-mg-U8C"/>
+                                    <constraint firstItem="XEZ-cn-NuH" firstAttribute="bottom" secondItem="pKd-JK-1RK" secondAttribute="bottom" id="gr8-UY-whM"/>
                                     <constraint firstItem="pKd-JK-1RK" firstAttribute="top" secondItem="YqJ-6D-hkv" secondAttribute="top" id="jxy-cl-4lN"/>
                                     <constraint firstAttribute="bottom" secondItem="pKd-JK-1RK" secondAttribute="bottom" id="lEK-FY-Fuk"/>
                                     <constraint firstAttribute="trailing" secondItem="pKd-JK-1RK" secondAttribute="trailing" id="oFY-FY-ZQC"/>
+                                    <constraint firstItem="XEZ-cn-NuH" firstAttribute="leading" secondItem="DJf-m7-8pw" secondAttribute="trailing" constant="8" symbolic="YES" id="qCm-eg-iii"/>
                                     <constraint firstItem="Az6-Kk-i2v" firstAttribute="top" secondItem="pZz-OO-gbl" secondAttribute="top" id="uJv-dQ-Uou"/>
                                     <constraint firstItem="pZz-OO-gbl" firstAttribute="leading" secondItem="Az6-Kk-i2v" secondAttribute="trailing" id="xs4-2w-RYl"/>
                                 </constraints>
@@ -220,23 +227,28 @@
                                         <exclude reference="pKd-JK-1RK"/>
                                         <exclude reference="Az6-Kk-i2v"/>
                                         <exclude reference="pZz-OO-gbl"/>
+                                        <exclude reference="XEZ-cn-NuH"/>
                                         <exclude reference="DJf-m7-8pw"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="L4N-p0-GuZ"/>
-                                        <exclude reference="Qpr-ff-nWW"/>
-                                        <exclude reference="uJv-dQ-Uou"/>
-                                        <exclude reference="2jn-bp-Kv4"/>
-                                        <exclude reference="xs4-2w-RYl"/>
                                         <exclude reference="Wa0-ai-L1R"/>
                                         <exclude reference="Wyh-1F-Ykg"/>
                                         <exclude reference="jxy-cl-4lN"/>
                                         <exclude reference="lEK-FY-Fuk"/>
                                         <exclude reference="oFY-FY-ZQC"/>
+                                        <exclude reference="L4N-p0-GuZ"/>
+                                        <exclude reference="Qpr-ff-nWW"/>
+                                        <exclude reference="uJv-dQ-Uou"/>
+                                        <exclude reference="2jn-bp-Kv4"/>
+                                        <exclude reference="xs4-2w-RYl"/>
                                         <exclude reference="N9b-21-I7p"/>
                                         <exclude reference="Xzd-mg-U8C"/>
                                         <exclude reference="5iP-1s-blB"/>
                                         <exclude reference="F3R-S4-j5R"/>
+                                        <exclude reference="6Pd-7W-HAp"/>
+                                        <exclude reference="JVW-WK-bUv"/>
+                                        <exclude reference="gr8-UY-whM"/>
+                                        <exclude reference="qCm-eg-iii"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -246,27 +258,32 @@
                                         <include reference="pZz-OO-gbl"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="L4N-p0-GuZ"/>
-                                        <include reference="Qpr-ff-nWW"/>
-                                        <include reference="uJv-dQ-Uou"/>
-                                        <include reference="xs4-2w-RYl"/>
                                         <include reference="Wa0-ai-L1R"/>
                                         <include reference="jxy-cl-4lN"/>
                                         <include reference="lEK-FY-Fuk"/>
                                         <include reference="oFY-FY-ZQC"/>
+                                        <include reference="L4N-p0-GuZ"/>
+                                        <include reference="Qpr-ff-nWW"/>
+                                        <include reference="uJv-dQ-Uou"/>
+                                        <include reference="xs4-2w-RYl"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="subviews">
+                                        <include reference="XEZ-cn-NuH"/>
                                         <include reference="DJf-m7-8pw"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="2jn-bp-Kv4"/>
                                         <include reference="Wyh-1F-Ykg"/>
+                                        <include reference="2jn-bp-Kv4"/>
                                         <include reference="N9b-21-I7p"/>
                                         <include reference="Xzd-mg-U8C"/>
                                         <include reference="5iP-1s-blB"/>
                                         <include reference="F3R-S4-j5R"/>
+                                        <include reference="6Pd-7W-HAp"/>
+                                        <include reference="JVW-WK-bUv"/>
+                                        <include reference="gr8-UY-whM"/>
+                                        <include reference="qCm-eg-iii"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1672,6 +1689,17 @@
             </objects>
             <point key="canvasLocation" x="3621.75" y="1885.125"/>
         </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="B0I-XM-SwQ">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="X0N-9Q-RBn" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="459"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaR-w5-FAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3627.75" y="2269.875"/>
+        </scene>
         <!--Options Page-->
         <scene sceneID="UJT-cg-Oxj">
             <objects>
@@ -1702,6 +1730,7 @@
         <image name="loadunload" width="220" height="217"/>
         <image name="methods" width="220" height="217"/>
         <image name="open_close" width="131" height="131"/>
+        <image name="peel-up-help-button" width="75" height="75"/>
         <image name="red-!" width="72" height="77"/>
         <image name="ref_cell" width="229" height="229"/>
         <image name="reset_auto" width="131" height="131"/>
