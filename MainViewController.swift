@@ -18,7 +18,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    @IBOutlet weak var _homeButton: UIButton!
    @IBOutlet var _temperatureLabel: UILabel!
    @IBOutlet var _statusLabel: UILabel!
-   @IBOutlet var _helpImageView: UIImageView!
+   @IBOutlet weak var _helpButton: UIButton!
    
    var _currentPage:IMercuryPage!
    var _instrument:MercuryInstrument!
@@ -85,6 +85,10 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          access: 1000)      
    }
    
+   @IBAction func helpButtonClicked(sender: AnyObject)
+   {
+   }
+   
    func updateHelpButton(page:IMercuryPage)
    {
       var show:Bool = true
@@ -95,7 +99,7 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
       
       dispatch_async(dispatch_get_main_queue(),
       { () -> Void in
-         self._helpImageView.hidden = show
+         self._helpButton.hidden = show
       })
    }
    
