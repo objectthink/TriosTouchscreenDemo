@@ -1693,7 +1693,7 @@
         <!--AV Player View Controller-->
         <scene sceneID="B0I-XM-SwQ">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="X0N-9Q-RBn" sceneMemberID="viewController">
+                <avPlayerViewController storyboardIdentifier="SignalsTabbedPageHelp" videoGravity="AVLayerVideoGravityResizeAspect" id="X0N-9Q-RBn" customClass="SignalsTabbedPageHelp" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1000" height="459"/>
                 </avPlayerViewController>
@@ -1720,6 +1720,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcM-Zm-m7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4392" y="1885.125"/>
+        </scene>
+        <!--Signals Tabbed Page Web View Help-->
+        <scene sceneID="EyS-j7-rEq">
+            <objects>
+                <viewController storyboardIdentifier="SignalsTabbedPageWebViewHelp" id="teB-RL-dkB" customClass="SignalsTabbedPageWebViewHelp" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Veg-KO-GGe"/>
+                        <viewControllerLayoutGuide type="bottom" id="atW-ge-6xB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BFy-dX-ReG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m81-O3-Hoh">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="459"/>
+                                </variation>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="m81-O3-Hoh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="m81-O3-Hoh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="459"/>
+                    <connections>
+                        <outlet property="_webView" destination="m81-O3-Hoh" id="fVv-FH-IR8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgE-YT-cVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4392" y="2269.875"/>
         </scene>
     </scenes>
     <resources>

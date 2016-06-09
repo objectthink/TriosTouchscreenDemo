@@ -87,6 +87,10 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
    
    @IBAction func helpButtonClicked(sender: AnyObject)
    {
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("SignalsTabbedPageWebViewHelp")
+        var page = controller as! IMercuryPage
+    
+        next(&page)// as! IMercuryPage)
    }
    
    func updateHelpButton(page:IMercuryPage)

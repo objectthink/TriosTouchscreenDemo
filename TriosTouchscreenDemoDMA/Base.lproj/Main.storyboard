@@ -570,23 +570,23 @@
                                 <exclude reference="en2-xM-XRT"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Bau-hU-SAH"/>
-                                <exclude reference="XAb-hj-5BF"/>
-                                <exclude reference="BIy-9a-Ubs"/>
-                                <exclude reference="ERb-ma-i8B"/>
-                                <exclude reference="vZp-C4-NjG"/>
                                 <exclude reference="Jz5-53-wCx"/>
                                 <exclude reference="RWH-oq-Yww"/>
                                 <exclude reference="ydg-AR-Auz"/>
                                 <exclude reference="OlB-2Q-31v"/>
                                 <exclude reference="Sat-e5-pl8"/>
                                 <exclude reference="yoP-lW-9cj"/>
-                                <exclude reference="pR6-dW-Mtd"/>
-                                <exclude reference="jH5-5E-Zuc"/>
-                                <exclude reference="x3e-v7-GIl"/>
                                 <exclude reference="Kuw-rR-hcu"/>
                                 <exclude reference="e5q-6U-Q1Q"/>
                                 <exclude reference="oki-S7-KOK"/>
+                                <exclude reference="jH5-5E-Zuc"/>
+                                <exclude reference="x3e-v7-GIl"/>
+                                <exclude reference="Bau-hU-SAH"/>
+                                <exclude reference="XAb-hj-5BF"/>
+                                <exclude reference="BIy-9a-Ubs"/>
+                                <exclude reference="ERb-ma-i8B"/>
+                                <exclude reference="vZp-C4-NjG"/>
+                                <exclude reference="pR6-dW-Mtd"/>
                                 <exclude reference="KkV-dJ-Z4T"/>
                                 <exclude reference="Tqc-n7-42j"/>
                             </mask>
@@ -599,23 +599,23 @@
                                 <include reference="en2-xM-XRT"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Bau-hU-SAH"/>
-                                <include reference="XAb-hj-5BF"/>
-                                <include reference="BIy-9a-Ubs"/>
-                                <include reference="ERb-ma-i8B"/>
-                                <include reference="vZp-C4-NjG"/>
                                 <include reference="Jz5-53-wCx"/>
                                 <include reference="RWH-oq-Yww"/>
                                 <include reference="ydg-AR-Auz"/>
                                 <include reference="OlB-2Q-31v"/>
                                 <include reference="Sat-e5-pl8"/>
                                 <include reference="yoP-lW-9cj"/>
-                                <include reference="pR6-dW-Mtd"/>
-                                <include reference="jH5-5E-Zuc"/>
-                                <include reference="x3e-v7-GIl"/>
                                 <include reference="Kuw-rR-hcu"/>
                                 <include reference="e5q-6U-Q1Q"/>
                                 <include reference="oki-S7-KOK"/>
+                                <include reference="jH5-5E-Zuc"/>
+                                <include reference="x3e-v7-GIl"/>
+                                <include reference="Bau-hU-SAH"/>
+                                <include reference="XAb-hj-5BF"/>
+                                <include reference="BIy-9a-Ubs"/>
+                                <include reference="ERb-ma-i8B"/>
+                                <include reference="vZp-C4-NjG"/>
+                                <include reference="pR6-dW-Mtd"/>
                                 <include reference="KkV-dJ-Z4T"/>
                                 <include reference="Tqc-n7-42j"/>
                             </mask>
@@ -646,6 +646,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0Xb-uR-X2h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HHO-2j-xie">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="539"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
