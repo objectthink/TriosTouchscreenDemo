@@ -17,6 +17,7 @@ import UIKit
 //
 
 import UIKit
+import Moscapsule
 
 class MainViewController: UIViewController, IMercuryApp
 {
@@ -26,6 +27,8 @@ class MainViewController: UIViewController, IMercuryApp
    var _instrument:MercuryInstrument!
    var _pages:Stack<IMercuryPage>
    
+   var mqttClient:MQTTClient!
+
    var instrument:MercuryInstrument
       {
       get
@@ -50,6 +53,38 @@ class MainViewController: UIViewController, IMercuryApp
       super.viewDidLoad()
       
       _homeButton.setImage(UIImage.init(named:"home_pressed"), forState: .Highlighted)
+      
+      dispatch_async(dispatch_get_main_queue(),
+      { () -> Void in
+         // set MQTT Client Configuration
+         let mqttConfig = MQTTConfig(
+            clientId: "SNE",
+            host: "ProgSci.net",          //"test.mosquitto.org",
+            port: 1883,
+            keepAlive: 60)
+                        
+         mqttConfig.onPublishCallback =
+         { messageId in
+            NSLog("published (mid=\(messageId))")
+         }
+                        
+         mqttConfig.onMessageCallback =
+         { mqttMessage in
+            NSLog("MQTT Message received: payload=\(mqttMessage.payloadString)")
+         }
+                        
+         // create new MQTT Connection
+         self.mqttClient = MQTT.newConnection(mqttConfig)
+                        
+         // publish and subscribe
+         //self.mqttClient.publishString("message", topic: "publish/topic", qos: 2, retain: false)
+         //self.mqttClient.subscribe("DMAMQ/DDMA-1B/#", qos: 2)
+         self.mqttClient.subscribe("#", qos: 2)
+
+         // disconnect
+         //mqttClient.disconnect()
+                        
+      })
       
    }
    

@@ -55,6 +55,8 @@
 		01B4ADC71CFD08C800A111EB /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC01CFD08C800A111EB /* BEMLine.m */; };
 		01B4ADC81CFD08C800A111EB /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */; };
 		01B4ADC91CFD08C800A111EB /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */; };
+		03EE0BCB0F1A5AA2D8C9C883 /* Pods_TriosTouchscreenDemoTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EBF8D6D5DC3B027578FDAC /* Pods_TriosTouchscreenDemoTV.framework */; };
+		4B1C36278BA860AE9001B768 /* Pods_TriosTouchscreenDemoDMA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA31C401ADD9A74F48B57EAF /* Pods_TriosTouchscreenDemoDMA.framework */; };
 		848EBCB21D05E03400CFE0F2 /* SystemInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */; };
 		848EBCF01D0737DA00CFE0F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EBCEF1D0737DA00CFE0F2 /* MainViewController.swift */; };
 		848EBCF11D07388700CFE0F2 /* IMercuryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0EF841CF5BBD600FB3D2E /* IMercuryPage.swift */; };
@@ -71,6 +73,7 @@
 		849A124C1CF4B70600E30B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124A1CF4B70600E30B19 /* Main.storyboard */; };
 		849A124E1CF4B70600E30B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849A124D1CF4B70600E30B19 /* Assets.xcassets */; };
 		849A12511CF4B70600E30B19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849A124F1CF4B70600E30B19 /* LaunchScreen.storyboard */; };
+		9547FD16688A10359FBC96BE /* Pods_TriosTouchscreenDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21744A410198D02F4FF711F /* Pods_TriosTouchscreenDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +131,11 @@
 		01B4ADC21CFD08C800A111EB /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPermanentPopupView.m; sourceTree = "<group>"; };
 		01B4ADC31CFD08C800A111EB /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
 		01B4ADC41CFD08C800A111EB /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		2B5ABBC2D1154ADD178B0536 /* Pods-TriosTouchscreenDemoDMA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriosTouchscreenDemoDMA.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriosTouchscreenDemoDMA/Pods-TriosTouchscreenDemoDMA.release.xcconfig"; sourceTree = "<group>"; };
+		2CD2E37E0B81D66D1EA4E57B /* Pods-TriosTouchscreenDemoTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriosTouchscreenDemoTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriosTouchscreenDemoTV/Pods-TriosTouchscreenDemoTV.release.xcconfig"; sourceTree = "<group>"; };
+		3D71BC1F30DC60ABC6F90A3E /* Pods-TriosTouchscreenDemoTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriosTouchscreenDemoTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriosTouchscreenDemoTV/Pods-TriosTouchscreenDemoTV.debug.xcconfig"; sourceTree = "<group>"; };
+		5726CD311B5E7719678D5CFD /* Pods-TriosTouchscreenDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriosTouchscreenDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriosTouchscreenDemo/Pods-TriosTouchscreenDemo.release.xcconfig"; sourceTree = "<group>"; };
+		669CD88B8962F339AA82BDF7 /* Pods-TriosTouchscreenDemoDMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriosTouchscreenDemoDMA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriosTouchscreenDemoDMA/Pods-TriosTouchscreenDemoDMA.debug.xcconfig"; sourceTree = "<group>"; };
 		848EBCB11D05E03400CFE0F2 /* SystemInfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfoPage.swift; sourceTree = "<group>"; };
 		848EBCEF1D0737DA00CFE0F2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		848EBCF21D0738F100CFE0F2 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 		849A124D1CF4B70600E30B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849A12501CF4B70600E30B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849A12521CF4B70600E30B19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A21744A410198D02F4FF711F /* Pods_TriosTouchscreenDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriosTouchscreenDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4EBF8D6D5DC3B027578FDAC /* Pods_TriosTouchscreenDemoTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriosTouchscreenDemoTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA513A5E5059B8134E2B30F5 /* Pods-TriosTouchscreenDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriosTouchscreenDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriosTouchscreenDemo/Pods-TriosTouchscreenDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EA31C401ADD9A74F48B57EAF /* Pods_TriosTouchscreenDemoDMA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriosTouchscreenDemoDMA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EE0BCB0F1A5AA2D8C9C883 /* Pods_TriosTouchscreenDemoTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +170,7 @@
 			files = (
 				848EBCFB1D08864900CFE0F2 /* AVFoundation.framework in Frameworks */,
 				848EBCFC1D08864900CFE0F2 /* AVKit.framework in Frameworks */,
+				4B1C36278BA860AE9001B768 /* Pods_TriosTouchscreenDemoDMA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +180,7 @@
 			files = (
 				848EBCFD1D08867E00CFE0F2 /* AVFoundation.framework in Frameworks */,
 				848EBCFE1D08867E00CFE0F2 /* AVKit.framework in Frameworks */,
+				9547FD16688A10359FBC96BE /* Pods_TriosTouchscreenDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +279,19 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		6F81A5F3E51DF7B85421DD36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA513A5E5059B8134E2B30F5 /* Pods-TriosTouchscreenDemo.debug.xcconfig */,
+				5726CD311B5E7719678D5CFD /* Pods-TriosTouchscreenDemo.release.xcconfig */,
+				669CD88B8962F339AA82BDF7 /* Pods-TriosTouchscreenDemoDMA.debug.xcconfig */,
+				2B5ABBC2D1154ADD178B0536 /* Pods-TriosTouchscreenDemoDMA.release.xcconfig */,
+				3D71BC1F30DC60ABC6F90A3E /* Pods-TriosTouchscreenDemoTV.debug.xcconfig */,
+				2CD2E37E0B81D66D1EA4E57B /* Pods-TriosTouchscreenDemoTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		849A123A1CF4B70600E30B19 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +304,8 @@
 				01183FBA1D043F73005C8FE7 /* TriosTouchscreenDemoTV */,
 				01183FCD1D0445E4005C8FE7 /* TriosTouchscreenDemoDMA */,
 				849A12441CF4B70600E30B19 /* Products */,
+				6F81A5F3E51DF7B85421DD36 /* Pods */,
+				A500A4794C11C1C89B6136F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,6 +331,16 @@
 			path = TriosTouchscreenDemo;
 			sourceTree = "<group>";
 		};
+		A500A4794C11C1C89B6136F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A21744A410198D02F4FF711F /* Pods_TriosTouchscreenDemo.framework */,
+				EA31C401ADD9A74F48B57EAF /* Pods_TriosTouchscreenDemoDMA.framework */,
+				B4EBF8D6D5DC3B027578FDAC /* Pods_TriosTouchscreenDemoTV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,9 +348,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01183FC71D043F73005C8FE7 /* Build configuration list for PBXNativeTarget "TriosTouchscreenDemoTV" */;
 			buildPhases = (
+				CDF2A4F45A1A4B3AA05C9398 /* [CP] Check Pods Manifest.lock */,
 				01183FB51D043F73005C8FE7 /* Sources */,
 				01183FB61D043F73005C8FE7 /* Frameworks */,
 				01183FB71D043F73005C8FE7 /* Resources */,
+				BCFC00D75B1B8A9F550AFC6E /* [CP] Embed Pods Frameworks */,
+				13C9F23C19447AF6FC9494A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -325,9 +368,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01183FDB1D0445E4005C8FE7 /* Build configuration list for PBXNativeTarget "TriosTouchscreenDemoDMA" */;
 			buildPhases = (
+				A3A929FEE61C604DE916CC79 /* [CP] Check Pods Manifest.lock */,
 				01183FC81D0445E4005C8FE7 /* Sources */,
 				01183FC91D0445E4005C8FE7 /* Frameworks */,
 				01183FCA1D0445E4005C8FE7 /* Resources */,
+				5BF35EA826C78EBFE9609DFD /* [CP] Embed Pods Frameworks */,
+				76FAF3E2A68ECF00F4EF8EAF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,9 +388,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849A12551CF4B70600E30B19 /* Build configuration list for PBXNativeTarget "TriosTouchscreenDemo" */;
 			buildPhases = (
+				1419505D4481E472C745169F /* [CP] Check Pods Manifest.lock */,
 				849A123F1CF4B70600E30B19 /* Sources */,
 				849A12401CF4B70600E30B19 /* Frameworks */,
 				849A12411CF4B70600E30B19 /* Resources */,
+				D86F1FB0BC8C8045C46397C4 /* [CP] Embed Pods Frameworks */,
+				29B8606FCA463F3ED5EBD07D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -429,6 +478,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13C9F23C19447AF6FC9494A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriosTouchscreenDemoTV/Pods-TriosTouchscreenDemoTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1419505D4481E472C745169F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29B8606FCA463F3ED5EBD07D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriosTouchscreenDemo/Pods-TriosTouchscreenDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BF35EA826C78EBFE9609DFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriosTouchscreenDemoDMA/Pods-TriosTouchscreenDemoDMA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76FAF3E2A68ECF00F4EF8EAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriosTouchscreenDemoDMA/Pods-TriosTouchscreenDemoDMA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A929FEE61C604DE916CC79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCFC00D75B1B8A9F550AFC6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriosTouchscreenDemoTV/Pods-TriosTouchscreenDemoTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF2A4F45A1A4B3AA05C9398 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D86F1FB0BC8C8045C46397C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TriosTouchscreenDemo/Pods-TriosTouchscreenDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01183FB51D043F73005C8FE7 /* Sources */ = {
@@ -552,6 +739,7 @@
 /* Begin XCBuildConfiguration section */
 		01183FC51D043F73005C8FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D71BC1F30DC60ABC6F90A3E /* Pods-TriosTouchscreenDemoTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -571,6 +759,7 @@
 		};
 		01183FC61D043F73005C8FE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD2E37E0B81D66D1EA4E57B /* Pods-TriosTouchscreenDemoTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -590,6 +779,7 @@
 		};
 		01183FDC1D0445E4005C8FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669CD88B8962F339AA82BDF7 /* Pods-TriosTouchscreenDemoDMA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TriosTouchscreenDemoDMA/Info.plist;
@@ -603,6 +793,7 @@
 		};
 		01183FDD1D0445E4005C8FE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5ABBC2D1154ADD178B0536 /* Pods-TriosTouchscreenDemoDMA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TriosTouchscreenDemoDMA/Info.plist;
@@ -701,6 +892,7 @@
 		};
 		849A12561CF4B70600E30B19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA513A5E5059B8134E2B30F5 /* Pods-TriosTouchscreenDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -721,6 +913,7 @@
 		};
 		849A12571CF4B70600E30B19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5726CD311B5E7719678D5CFD /* Pods-TriosTouchscreenDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
