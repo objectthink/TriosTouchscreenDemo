@@ -18,11 +18,13 @@ import UIKit
 
 import UIKit
 import Moscapsule
+import Unbox
 
 class MainViewController: UIViewController, IMercuryApp
 {
    @IBOutlet weak var _homeButton: UIButton!
-   
+   @IBOutlet weak var _temperatureLabel: UILabel!
+
    var _currentPage:IMercuryPage!
    var _instrument:MercuryInstrument!
    var _pages:Stack<IMercuryPage>
@@ -70,7 +72,32 @@ class MainViewController: UIViewController, IMercuryApp
                         
          mqttConfig.onMessageCallback =
          { mqttMessage in
+            
             NSLog("MQTT Message received: payload=\(mqttMessage.payloadString)")
+            
+            do
+            {
+                let temperature:Temperature = try Unbox(mqttMessage.payload)
+
+                print(temperature.current)
+                print(temperature.setPoint)
+                
+                dispatch_async(dispatch_get_main_queue(),
+                { () -> Void in
+                    //self._temperatureLabel.text = "\(temperature.current)"
+                    self._temperatureLabel.text = NSString(format: "%.2f ℃", temperature.current) as String
+                    
+                    if self._pages.peek() is ITemperature
+                    {
+                        (self._pages.peek() as! ITemperature).updateTemperature(temperature)
+                    }
+                });
+            }
+            catch
+            {
+                
+            }
+            
          }
                         
          // create new MQTT Connection
@@ -79,7 +106,7 @@ class MainViewController: UIViewController, IMercuryApp
          // publish and subscribe
          //self.mqttClient.publishString("message", topic: "publish/topic", qos: 2, retain: false)
          //self.mqttClient.subscribe("DMAMQ/DDMA-1B/#", qos: 2)
-         self.mqttClient.subscribe("#", qos: 2)
+         self.mqttClient.subscribe("DMAMQ/DDMA-1B/LCDStat/Temp", qos: 2)
 
          // disconnect
          //mqttClient.disconnect()
@@ -210,6 +237,18 @@ class MainViewController: UIViewController, IMercuryApp
     }
     */
    
+}
+
+struct Temperature: Unboxable
+{
+    let current: Double
+    let setPoint: Double
+    
+    init(unboxer: Unboxer)
+    {
+        self.current = unboxer.unbox("Temperature")
+        self.setPoint = unboxer.unbox("SetPoint")
+    }
 }
 
 struct Stack<Element>

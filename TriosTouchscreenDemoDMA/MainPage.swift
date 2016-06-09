@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainPage: UIViewController, IMercuryPage
+class MainPage: UIViewController, IMercuryPage, ITemperature
 {
    @IBOutlet var _temperatureButton: UIButton!
    @IBOutlet var _positionButton:UIButton!
@@ -19,6 +19,8 @@ class MainPage: UIViewController, IMercuryPage
    @IBOutlet var _unlockedButton:UIButton!
    @IBOutlet var _lockedButton:UIButton!
    
+   @IBOutlet weak var _temperatureLabel: UILabel!
+    
    var _isSelected:Bool = false
    
    var _app:IMercuryApp!
@@ -34,6 +36,11 @@ class MainPage: UIViewController, IMercuryPage
       }
    }
    
+   func updateTemperature(temperature: Temperature)
+   {
+      self._temperatureLabel.text = NSString(format: "%.2f ℃", temperature.current) as String
+   }
+    
    override func viewDidLoad()
    {
       super.viewDidLoad()

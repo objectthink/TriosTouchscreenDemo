@@ -1,10 +1,12 @@
 PODS:
   - Moscapsule (0.5.1)
   - OpenSSL-Universal (1.0.1.19)
+  - Unbox (1.7)
 
 DEPENDENCIES:
   - Moscapsule (from `https://github.com/flightonary/Moscapsule.git`)
   - OpenSSL-Universal (~> 1.0.1.18)
+  - Unbox
 
 EXTERNAL SOURCES:
   Moscapsule:
@@ -18,7 +20,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Moscapsule: e80b7d3d6ac34706731cfdbe65fbf1d731fad88a
   OpenSSL-Universal: 07489b0316f0f4f53c928e402e2ecbbedf96d93b
+  Unbox: 576f1470399f84c411ced0a8ce4c4caaeb8acf1d
 
-PODFILE CHECKSUM: 23a59656af306823ecf71cc3cec6b7c1d417fc25
+PODFILE CHECKSUM: 14540d77fbf9a639ff3810bc2c998d04eaf4db8f
 
 COCOAPODS: 1.0.1
