@@ -21,8 +21,3 @@ protocol IMercuryPage
 {
    var app:IMercuryApp {get set}
 }
-
-protocol ITemperature
-{
-    func updateTemperature(temp:Temperature)
-}

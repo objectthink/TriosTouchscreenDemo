@@ -24,6 +24,7 @@ class MainViewController: UIViewController, IMercuryApp
 {
    @IBOutlet weak var _homeButton: UIButton!
    @IBOutlet weak var _temperatureLabel: UILabel!
+   @IBOutlet weak var _positionLabel: UILabel!
 
    var _currentPage:IMercuryPage!
    var _instrument:MercuryInstrument!
@@ -95,9 +96,23 @@ class MainViewController: UIViewController, IMercuryApp
             }
             catch
             {
-                
             }
             
+            do
+            {
+               let lcdStat:LCDStat = try Unbox(mqttMessage.payload)
+               
+               dispatch_async(dispatch_get_main_queue(),
+                  { () -> Void in
+                     if self._pages.peek() is ILCDStat
+                     {
+                        (self._pages.peek() as! ILCDStat).update(lcdStat)
+                     }
+               });
+            }
+            catch
+            {
+            }
          }
                         
          // create new MQTT Connection
@@ -106,6 +121,8 @@ class MainViewController: UIViewController, IMercuryApp
          // publish and subscribe
          //self.mqttClient.publishString("message", topic: "publish/topic", qos: 2, retain: false)
          //self.mqttClient.subscribe("DMAMQ/DDMA-1B/#", qos: 2)
+         
+         self.mqttClient.subscribe("DMAMQ/DDMA-1B/LCDStat", qos: 2)
          self.mqttClient.subscribe("DMAMQ/DDMA-1B/LCDStat/Temp", qos: 2)
 
          // disconnect
@@ -249,6 +266,28 @@ struct Temperature: Unboxable
         self.current = unboxer.unbox("Temperature")
         self.setPoint = unboxer.unbox("SetPoint")
     }
+}
+
+struct LCDStat: Unboxable
+{
+   let temperature:Double
+   let position: Double
+   
+   init(unboxer: Unboxer)
+   {
+      self.temperature = unboxer.unbox("Temperature")
+      self.position = unboxer.unbox("Position")
+   }
+}
+
+protocol ITemperature
+{
+   func updateTemperature(temp:Temperature)
+}
+
+protocol ILCDStat
+{
+   func update(lcdStat:LCDStat)
 }
 
 struct Stack<Element>

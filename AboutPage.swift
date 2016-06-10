@@ -39,6 +39,29 @@ class AboutPage: UIViewController, IMercuryPage
       // Do any additional setup after loading the view.
       let attr = NSDictionary(object: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!, forKey: NSFontAttributeName)
       UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , forState: .Normal)
+      
+      let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(SignalsTabbedPage.swipe(_:)))
+      let swipeLeft  = UISwipeGestureRecognizer(target: self, action: #selector(SignalsTabbedPage.swipe(_:)))
+      
+      swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+      swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+      
+      self.view.addGestureRecognizer(swipeLeft)
+      self.view.addGestureRecognizer(swipeRight)
+   }
+   
+   @objc func swipe(gestureReconizer: UISwipeGestureRecognizer)
+   {
+      if _segmentedControl.selectedSegmentIndex == 0
+      {
+         _segmentedControl.selectedSegmentIndex = 1
+      }
+      else
+      {
+         _segmentedControl.selectedSegmentIndex = 0
+      }
+      
+      _segmentedControlValueChanged(UISegmentedControl())
    }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

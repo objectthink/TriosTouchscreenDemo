@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TemperaturePage: UIViewController, IMercuryPage
+class TemperaturePage: UIViewController, IMercuryPage, ITemperature
 {
+   @IBOutlet var _measuredLabel: UILabel!
+   @IBOutlet var _commandLabel: UILabel!
    
    var _app:IMercuryApp!
    var app:IMercuryApp
@@ -30,6 +32,12 @@ class TemperaturePage: UIViewController, IMercuryPage
       super.viewDidLoad()
       
       // Do any additional setup after loading the view.
+   }
+   
+   func updateTemperature(temperature: Temperature)
+   {
+      self._measuredLabel.text = NSString(format: "%.2f", temperature.current) as String
+      self._commandLabel.text = NSString(format: "%.2f", temperature.setPoint) as String
    }
    
    override func didReceiveMemoryWarning()
