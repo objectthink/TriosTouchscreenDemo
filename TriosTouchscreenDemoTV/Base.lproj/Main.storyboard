@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qch-rK-ElX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -22,13 +24,66 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_bar" translatesAutoresizingMaskIntoConstraints="NO" id="SAm-P6-7kW">
                                         <rect key="frame" x="0.0" y="0.0" width="1920" height="128"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSC2500" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-aH-lOe">
+                                        <rect key="frame" x="203" y="0.0" width="240" height="102"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="DSn-0x-C0R"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvl-RA-WkQ">
+                                        <rect key="frame" x="756" y="8" width="200" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="C32-QB-LtT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrV-02-JIA">
+                                        <rect key="frame" x="964" y="8" width="200" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="wWh-YW-Ygc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ymr-Or-DwW">
+                                        <rect key="frame" x="1595" y="8" width="49" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="0d9-Tw-2mF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39.97 ℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWL-1g-2eX">
+                                        <rect key="frame" x="1652" y="8" width="205" height="94"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="205" id="c2J-lc-GuK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3JT-aH-lOe" secondAttribute="bottom" constant="26" id="0M6-ho-gYw"/>
                                     <constraint firstItem="SAm-P6-7kW" firstAttribute="top" secondItem="eJV-Dx-B7y" secondAttribute="top" id="50y-z8-f5Q"/>
+                                    <constraint firstItem="3JT-aH-lOe" firstAttribute="top" secondItem="SAm-P6-7kW" secondAttribute="top" id="8NX-kx-wPt"/>
+                                    <constraint firstItem="Uvl-RA-WkQ" firstAttribute="leading" secondItem="eJV-Dx-B7y" secondAttribute="leading" constant="756" id="Dps-9w-obH"/>
+                                    <constraint firstItem="3JT-aH-lOe" firstAttribute="bottom" secondItem="Uvl-RA-WkQ" secondAttribute="bottom" id="J8l-rk-0Jd"/>
+                                    <constraint firstItem="Uvl-RA-WkQ" firstAttribute="baseline" secondItem="PrV-02-JIA" secondAttribute="baseline" id="P3Y-fa-J3o"/>
+                                    <constraint firstItem="PrV-02-JIA" firstAttribute="top" secondItem="Ymr-Or-DwW" secondAttribute="top" id="ano-HF-xQe"/>
+                                    <constraint firstItem="Ymr-Or-DwW" firstAttribute="bottom" secondItem="DWL-1g-2eX" secondAttribute="bottom" id="bQe-RL-hIV"/>
+                                    <constraint firstItem="DWL-1g-2eX" firstAttribute="leading" secondItem="Ymr-Or-DwW" secondAttribute="trailing" constant="8" symbolic="YES" id="di3-wy-v0x"/>
+                                    <constraint firstItem="3JT-aH-lOe" firstAttribute="leading" secondItem="eJV-Dx-B7y" secondAttribute="leading" constant="203" id="fRB-0N-Tes"/>
+                                    <constraint firstAttribute="trailing" secondItem="DWL-1g-2eX" secondAttribute="trailing" constant="63" id="fgM-ed-rBb"/>
+                                    <constraint firstItem="Uvl-RA-WkQ" firstAttribute="top" secondItem="eJV-Dx-B7y" secondAttribute="topMargin" id="fwZ-vQ-epK"/>
                                     <constraint firstAttribute="trailing" secondItem="SAm-P6-7kW" secondAttribute="trailing" id="ny3-6i-tMX"/>
+                                    <constraint firstItem="Uvl-RA-WkQ" firstAttribute="firstBaseline" secondItem="PrV-02-JIA" secondAttribute="firstBaseline" id="pS1-ca-oXy"/>
                                     <constraint firstAttribute="bottom" secondItem="SAm-P6-7kW" secondAttribute="bottom" id="qfb-eD-OTt"/>
                                     <constraint firstItem="SAm-P6-7kW" firstAttribute="leading" secondItem="eJV-Dx-B7y" secondAttribute="leading" id="rhL-FS-C0E"/>
+                                    <constraint firstItem="PrV-02-JIA" firstAttribute="bottom" secondItem="Ymr-Or-DwW" secondAttribute="bottom" id="tyb-ch-7Rv"/>
+                                    <constraint firstItem="Ymr-Or-DwW" firstAttribute="top" secondItem="DWL-1g-2eX" secondAttribute="top" id="yR4-X3-Qw1"/>
+                                    <constraint firstItem="PrV-02-JIA" firstAttribute="leading" secondItem="Uvl-RA-WkQ" secondAttribute="trailing" constant="8" symbolic="YES" id="ylz-ys-K5K"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehj-Ni-vX0">
@@ -252,10 +307,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DSC2500" width="271" height="69"/>
         <image name="back" width="131" height="131"/>
         <image name="bottom_bar" width="1280" height="170"/>
         <image name="home" width="131" height="131"/>
         <image name="signals" width="220" height="217"/>
+        <image name="temp_icon" width="37" height="77"/>
         <image name="top_bar" width="1280" height="91"/>
     </resources>
 </document>
