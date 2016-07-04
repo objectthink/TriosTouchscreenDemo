@@ -40,9 +40,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrV-02-JIA">
-                                        <rect key="frame" x="964" y="8" width="200" height="94"/>
+                                        <rect key="frame" x="964" y="8" width="353" height="94"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="wWh-YW-Ygc"/>
+                                            <constraint firstAttribute="width" constant="353" id="wWh-YW-Ygc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                         <nil key="highlightedColor"/>
@@ -151,6 +151,8 @@
                     <connections>
                         <outlet property="_backButton" destination="XSe-7l-28o" id="gid-5Z-3Ok"/>
                         <outlet property="_homeButton" destination="6Kc-7f-0hv" id="mom-WA-0cR"/>
+                        <outlet property="_statusLabel" destination="PrV-02-JIA" id="Bzl-p7-7eE"/>
+                        <outlet property="_temperatureLabel" destination="DWL-1g-2eX" id="01y-aN-AHf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZz-2n-Lf5" userLabel="First Responder" sceneMemberID="firstResponder"/>

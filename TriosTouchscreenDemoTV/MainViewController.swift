@@ -22,6 +22,8 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
 {
    @IBOutlet weak var _backButton: UIButton!
    @IBOutlet weak var _homeButton: UIButton!
+   @IBOutlet var _temperatureLabel: UILabel!
+   @IBOutlet var _statusLabel: UILabel!
    
    var _currentPage:IMercuryPage!
    var _instrument:MercuryInstrument!
@@ -211,11 +213,11 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
                            
                            if f == -Float.infinity
                            {
-                              //self._temperatureLabel.text = "--- ℃"
+                              self._temperatureLabel.text = "--- ℃"
                            }
                            else
                            {
-                              //self._temperatureLabel.text = String.init(format: "%.2f ℃", f)
+                              self._temperatureLabel.text = String.init(format: "%.2f ℃", f)
                            }
          })
       }
@@ -230,19 +232,19 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          let runStatus = response.runStatus.rawValue
          dispatch_async(dispatch_get_main_queue(),
                         { () -> Void in
-//                           switch(runStatus)
-//                           {
-//                           case  0:
-//                              self._statusLabel.text = "Idle"
-//                           case 1:
-//                              self._statusLabel.text = "PreTest"
-//                           case 2:
-//                              self._statusLabel.text = "Test"
-//                           case 3:
-//                              self._statusLabel.text = "PostTest"
-//                           default:
-//                              self._statusLabel.text = ""
-//                           }
+                           switch(runStatus)
+                           {
+                           case  0:
+                              self._statusLabel.text = "Idle"
+                           case 1:
+                              self._statusLabel.text = "PreTest"
+                           case 2:
+                              self._statusLabel.text = "Test"
+                           case 3:
+                              self._statusLabel.text = "PostTest"
+                           default:
+                              self._statusLabel.text = ""
+                           }
                            
          })
       }
@@ -260,19 +262,19 @@ class MainViewController: UIViewController, IMercuryApp, MercuryInstrumentDelega
          let runStatus = response.runStatus.rawValue
          dispatch_async(dispatch_get_main_queue(),
                         { () -> Void in
-//                           switch(runStatus)
-//                           {
-//                           case  0:
-//                              self._statusLabel.text = "Idle"
-//                           case 1:
-//                              self._statusLabel.text = "PreTest"
-//                           case 2:
-//                              self._statusLabel.text = "Test"
-//                           case 3:
-//                              self._statusLabel.text = "PostTest"
-//                           default:
-//                              self._statusLabel.text = "Unknown"
-//                           }
+                           switch(runStatus)
+                           {
+                           case  0:
+                              self._statusLabel.text = "Idle"
+                           case 1:
+                              self._statusLabel.text = "PreTest"
+                           case 2:
+                              self._statusLabel.text = "Test"
+                           case 3:
+                              self._statusLabel.text = "PostTest"
+                           default:
+                              self._statusLabel.text = "Unknown"
+                           }
                            
          })
       }
