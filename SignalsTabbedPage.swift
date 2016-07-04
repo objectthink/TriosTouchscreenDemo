@@ -90,8 +90,7 @@ class SignalsTabbedPage: UIViewController, IMercuryPage
         var nextController:UIViewController
         var currentController:UIViewController
         var nextPage:IMercuryPage
-        var currentPage:IMercuryPage
-        
+      
         switch _segmentedControl.selectedSegmentIndex
         {
         case 0:
@@ -104,11 +103,9 @@ class SignalsTabbedPage: UIViewController, IMercuryPage
             break
         default:
             return
-            break
         }
         
         nextPage = nextController as! IMercuryPage
-        currentPage = currentController as! IMercuryPage
         
         currentController.willMoveToParentViewController(nil)
         

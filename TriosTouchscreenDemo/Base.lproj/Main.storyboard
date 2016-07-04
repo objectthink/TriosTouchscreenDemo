@@ -381,6 +381,9 @@
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="389" y="262" width="220" height="217"/>
                                 </variation>
+                                <connections>
+                                    <action selector="methodButtonClicked:" destination="Gz1-KM-un5" eventType="touchUpInside" id="R2j-NB-0PM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsh-am-0Sg">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -468,7 +471,7 @@
                                     <rect key="frame" x="98" y="487" width="220" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="METHODS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noA-fN-nxp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="METHOD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noA-fN-nxp">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -868,7 +871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrg-cy-ppZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="1410.375"/>
+            <point key="canvasLocation" x="2056.5" y="1355.625"/>
         </scene>
         <!--Autosampler Load Unload Page-->
         <scene sceneID="Fas-Uh-g35">
@@ -1245,7 +1248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCr-jj-77c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615" y="1371.375"/>
+            <point key="canvasLocation" x="3621.75" y="1374.375"/>
         </scene>
         <!--Signals Page-->
         <scene sceneID="CeQ-rD-S4Q">
@@ -1881,6 +1884,137 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgE-YT-cVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4392" y="2269.875"/>
+        </scene>
+        <!--Method Tabbed Page-->
+        <scene sceneID="9Yg-hs-UVQ">
+            <objects>
+                <viewController storyboardIdentifier="MethodTabbedPage" id="JKy-Xa-Oiv" customClass="MethodTabbedPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tEF-pH-rrL"/>
+                        <viewControllerLayoutGuide type="bottom" id="r6P-7i-NAQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7ym-Yy-ryP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="539"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3XY-ps-04X">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="dm4-WU-jr6"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Method"/>
+                                    <segment title="Sample"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dm4-WU-jr6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="dm4-WU-jr6"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="_segmentedControlValueChanged:" destination="JKy-Xa-Oiv" eventType="valueChanged" id="tzg-Z4-RJj"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZK-Dg-zPJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="K5M-rr-r9y" kind="embed" identifier="EmbedSegue" id="Vwr-6S-67h"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WZK-Dg-zPJ" firstAttribute="top" secondItem="3XY-ps-04X" secondAttribute="bottom" constant="7" id="7ge-YQ-R5j"/>
+                            <constraint firstItem="3XY-ps-04X" firstAttribute="centerX" secondItem="WZK-Dg-zPJ" secondAttribute="centerX" id="8zH-gd-dAs"/>
+                            <constraint firstItem="WZK-Dg-zPJ" firstAttribute="leading" secondItem="7ym-Yy-ryP" secondAttribute="leading" id="Gdg-r9-OTh"/>
+                            <constraint firstItem="3XY-ps-04X" firstAttribute="centerX" secondItem="7ym-Yy-ryP" secondAttribute="centerX" id="JeE-OZ-V0V"/>
+                            <constraint firstItem="3XY-ps-04X" firstAttribute="top" secondItem="7ym-Yy-ryP" secondAttribute="topMargin" constant="5" id="KUb-oA-Mxr"/>
+                            <constraint firstItem="WZK-Dg-zPJ" firstAttribute="centerY" secondItem="7ym-Yy-ryP" secondAttribute="centerY" id="uRw-a9-YDx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3XY-ps-04X"/>
+                                <exclude reference="WZK-Dg-zPJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JeE-OZ-V0V"/>
+                                <exclude reference="KUb-oA-Mxr"/>
+                                <exclude reference="8zH-gd-dAs"/>
+                                <exclude reference="uRw-a9-YDx"/>
+                                <exclude reference="7ge-YQ-R5j"/>
+                                <exclude reference="Gdg-r9-OTh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="3XY-ps-04X"/>
+                                <include reference="WZK-Dg-zPJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JeE-OZ-V0V"/>
+                                <include reference="KUb-oA-Mxr"/>
+                                <include reference="8zH-gd-dAs"/>
+                                <include reference="uRw-a9-YDx"/>
+                                <include reference="7ge-YQ-R5j"/>
+                                <include reference="Gdg-r9-OTh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="539"/>
+                    <connections>
+                        <outlet property="_segmentedControl" destination="3XY-ps-04X" id="pd2-kX-qg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRN-LT-C9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="1785.5"/>
+        </scene>
+        <!--Sample Info Page-->
+        <scene sceneID="SUQ-Tk-QPA">
+            <objects>
+                <viewController storyboardIdentifier="SampleInfoPage" id="XF5-tb-DG0" customClass="SampleInfoPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eXo-o4-7mY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zas-vW-bSY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iaD-fe-ULz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="459"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="459"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J59-ee-Edy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="2269.875"/>
+        </scene>
+        <!--Method Page-->
+        <scene sceneID="hsz-9b-hok">
+            <objects>
+                <viewController storyboardIdentifier="MethodPage" id="K5M-rr-r9y" customClass="MethodPage" customModule="TriosTouchscreenDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A9l-44-0jF"/>
+                        <viewControllerLayoutGuide type="bottom" id="bec-ct-urJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jqH-DD-2Cd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="459"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1000" height="459"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRb-dk-9AM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.5" y="2269.875"/>
         </scene>
     </scenes>
     <resources>

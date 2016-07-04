@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01117F261D2B180D00189B1E /* MethodTabbedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01117F251D2B180D00189B1E /* MethodTabbedPage.swift */; };
+		01117F281D2B18DB00189B1E /* MethodPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01117F271D2B18DB00189B1E /* MethodPage.swift */; };
+		01117F2A1D2B19A300189B1E /* SampleInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01117F291D2B19A300189B1E /* SampleInfoPage.swift */; };
 		01183FBC1D043F73005C8FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01183FBB1D043F73005C8FE7 /* AppDelegate.swift */; };
 		01183FC11D043F73005C8FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01183FBF1D043F73005C8FE7 /* Main.storyboard */; };
 		01183FC31D043F73005C8FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01183FC21D043F73005C8FE7 /* Assets.xcassets */; };
@@ -106,6 +109,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01117F251D2B180D00189B1E /* MethodTabbedPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodTabbedPage.swift; sourceTree = "<group>"; };
+		01117F271D2B18DB00189B1E /* MethodPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodPage.swift; sourceTree = "<group>"; };
+		01117F291D2B19A300189B1E /* SampleInfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleInfoPage.swift; sourceTree = "<group>"; };
 		01183FB91D043F73005C8FE7 /* TriosTouchscreenDemoTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriosTouchscreenDemoTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01183FBB1D043F73005C8FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01183FC01D043F73005C8FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -279,6 +285,9 @@
 				01A059071D06413700DAA7AF /* OptionsPage.swift */,
 				848EBCF71D087FF700CFE0F2 /* SignalsTabbedPageHelp.swift */,
 				848EBCFF1D08CF0400CFE0F2 /* SignalsTabbedPageWebViewHelp.swift */,
+				01117F251D2B180D00189B1E /* MethodTabbedPage.swift */,
+				01117F271D2B18DB00189B1E /* MethodPage.swift */,
+				01117F291D2B19A300189B1E /* SampleInfoPage.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -765,6 +774,8 @@
 				01A0EF891CF8EF4500FB3D2E /* SignalsTabbedPage.swift in Sources */,
 				848EBCB21D05E03400CFE0F2 /* SystemInfoPage.swift in Sources */,
 				849A12471CF4B70600E30B19 /* AppDelegate.swift in Sources */,
+				01117F281D2B18DB00189B1E /* MethodPage.swift in Sources */,
+				01117F2A1D2B19A300189B1E /* SampleInfoPage.swift in Sources */,
 				01A059021D0634BA00DAA7AF /* NetworkPage.swift in Sources */,
 				01A0EF8B1CF8EFD800FB3D2E /* SignalsPage.swift in Sources */,
 				01B4ADAF1CFA1E6E00A111EB /* MercuryProcedure.m in Sources */,
@@ -772,6 +783,7 @@
 				01A0EF851CF5BBD600FB3D2E /* IMercuryPage.swift in Sources */,
 				01A0EF811CF5B45900FB3D2E /* AutosamplerPage.swift in Sources */,
 				01A0EF7F1CF52C3400FB3D2E /* MainPage.swift in Sources */,
+				01117F261D2B180D00189B1E /* MethodTabbedPage.swift in Sources */,
 				848EBD001D08CF0400CFE0F2 /* SignalsTabbedPageWebViewHelp.swift in Sources */,
 				01B4ADB01CFA1E6E00A111EB /* MercuryFile.m in Sources */,
 				01B4ADB71CFB17AF00A111EB /* ChartPage.swift in Sources */,
@@ -1098,6 +1110,7 @@
 				01C093031D15752F00BEE14A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		849A123E1CF4B70600E30B19 /* Build configuration list for PBXProject "TriosTouchscreenDemo" */ = {
 			isa = XCConfigurationList;
